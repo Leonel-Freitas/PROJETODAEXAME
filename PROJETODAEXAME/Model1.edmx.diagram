@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc530855926844d2ac81cb0a25194cd5" Name="Diagram1" ZoomLevel="50" >
+        <EntityTypeShape EntityType="Model1.Cliente" Width="1.5" PointX="6.625" PointY="11.875" />
+        <EntityTypeShape EntityType="Model1.Trabalhador" Width="1.5" PointX="10.5" PointY="3.25" />
+        <EntityTypeShape EntityType="Model1.Restaurante" Width="1.5" PointX="7.5" PointY="3.125" />
+        <EntityTypeShape EntityType="Model1.Pedido" Width="1.5" PointX="3" PointY="6.75" />
+        <EntityTypeShape EntityType="Model1.ItemMenu" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="Model1.Categoria" Width="1.5" PointX="7.5" PointY="5.875" />
+        <EntityTypeShape EntityType="Model1.Estado" Width="1.5" PointX="5.25" PointY="8.875" />
+        <EntityTypeShape EntityType="Model1.Pagamento" Width="1.5" PointX="0.75" PointY="8.375" />
+        <EntityTypeShape EntityType="Model1.Morada" Width="1.5" PointX="9.75" PointY="9.375" />
+        <EntityTypeShape EntityType="Model1.Pessoa" Width="1.5" PointX="10.125" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.MetodoPagamento" Width="1.5" PointX="3" PointY="11.25" />
+        <AssociationConnector Association="Model1.PedidoCliente" />
+        <AssociationConnector Association="Model1.TrabalhadorRestaurante" />
+        <AssociationConnector Association="Model1.PedidoTrabalhador" />
+        <AssociationConnector Association="Model1.ItemMenuRestaurante" />
+        <AssociationConnector Association="Model1.ItemMenuCategoria" />
+        <AssociationConnector Association="Model1.PedidoItemMenu" />
+        <AssociationConnector Association="Model1.PedidoEstado" />
+        <AssociationConnector Association="Model1.PagamentoPedido" />
+        <AssociationConnector Association="Model1.PagamentoMetodoPagamento" />
+        <AssociationConnector Association="Model1.RestauranteMorada" />
+        <AssociationConnector Association="Model1.PessoaMorada" />
+        <InheritanceConnector EntityType="Model1.Cliente" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
