@@ -107,6 +107,7 @@
     <Property Name="Fotografia" Type="smallint" Nullable="false" />
     <Property Name="Ingredientes" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Ativo" Type="bit" Nullable="false" />
+    <Property Name="Preço" Type="float" Nullable="false" />
     <Property Name="Categoria_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="CategoriaSet">
@@ -481,6 +482,7 @@
           <NavigationProperty Name="Restaurante" Relationship="Model1.ItemMenuRestaurante" FromRole="ItemMenu" ToRole="Restaurante" />
           <NavigationProperty Name="Categoria" Relationship="Model1.ItemMenuCategoria" FromRole="ItemMenu" ToRole="Categoria" />
           <NavigationProperty Name="Pedido" Relationship="Model1.PedidoItemMenu" FromRole="ItemMenu" ToRole="Pedido" />
+          <Property Name="Preço" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="Categoria">
           <Key>
@@ -612,6 +614,7 @@
           <ScalarProperty Name="Fotografia" ColumnName="Fotografia" />
           <ScalarProperty Name="Ingredientes" ColumnName="Ingredientes" />
           <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Preço" ColumnName="Preço" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

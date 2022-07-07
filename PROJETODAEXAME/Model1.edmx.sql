@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/07/2022 19:31:06
+-- Date Created: 07/07/2022 23:49:30
 -- Generated from EDMX file: C:\Users\leomi\OneDrive\Ambiente de Trabalho\PROJETODAEXAME\PROJETODAEXAME\Model1.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,95 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_PedidoCliente]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PedidoSet] DROP CONSTRAINT [FK_PedidoCliente];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TrabalhadorRestaurante]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PessoaSet_Trabalhador] DROP CONSTRAINT [FK_TrabalhadorRestaurante];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PedidoTrabalhador]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PedidoSet] DROP CONSTRAINT [FK_PedidoTrabalhador];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ItemMenuRestaurante_ItemMenu]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ItemMenuRestaurante] DROP CONSTRAINT [FK_ItemMenuRestaurante_ItemMenu];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ItemMenuRestaurante_Restaurante]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ItemMenuRestaurante] DROP CONSTRAINT [FK_ItemMenuRestaurante_Restaurante];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ItemMenuCategoria]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ItemMenuSet] DROP CONSTRAINT [FK_ItemMenuCategoria];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PedidoItemMenu_Pedido]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PedidoItemMenu] DROP CONSTRAINT [FK_PedidoItemMenu_Pedido];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PedidoItemMenu_ItemMenu]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PedidoItemMenu] DROP CONSTRAINT [FK_PedidoItemMenu_ItemMenu];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PedidoEstado]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PedidoSet] DROP CONSTRAINT [FK_PedidoEstado];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PagamentoPedido]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PagamentoSet] DROP CONSTRAINT [FK_PagamentoPedido];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PagamentoMetodoPagamento]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PagamentoSet] DROP CONSTRAINT [FK_PagamentoMetodoPagamento];
+GO
+IF OBJECT_ID(N'[dbo].[FK_RestauranteMorada]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[RestauranteSet] DROP CONSTRAINT [FK_RestauranteMorada];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PessoaMorada]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PessoaSet] DROP CONSTRAINT [FK_PessoaMorada];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Cliente_inherits_Pessoa]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PessoaSet_Cliente] DROP CONSTRAINT [FK_Cliente_inherits_Pessoa];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Trabalhador_inherits_Pessoa]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PessoaSet_Trabalhador] DROP CONSTRAINT [FK_Trabalhador_inherits_Pessoa];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[RestauranteSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[RestauranteSet];
+GO
+IF OBJECT_ID(N'[dbo].[PedidoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PedidoSet];
+GO
+IF OBJECT_ID(N'[dbo].[ItemMenuSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ItemMenuSet];
+GO
+IF OBJECT_ID(N'[dbo].[CategoriaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CategoriaSet];
+GO
+IF OBJECT_ID(N'[dbo].[EstadoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EstadoSet];
+GO
+IF OBJECT_ID(N'[dbo].[PagamentoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PagamentoSet];
+GO
+IF OBJECT_ID(N'[dbo].[MoradaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[MoradaSet];
+GO
+IF OBJECT_ID(N'[dbo].[PessoaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PessoaSet];
+GO
+IF OBJECT_ID(N'[dbo].[MetodoPagamentoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[MetodoPagamentoSet];
+GO
+IF OBJECT_ID(N'[dbo].[PessoaSet_Cliente]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PessoaSet_Cliente];
+GO
+IF OBJECT_ID(N'[dbo].[PessoaSet_Trabalhador]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PessoaSet_Trabalhador];
+GO
+IF OBJECT_ID(N'[dbo].[ItemMenuRestaurante]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ItemMenuRestaurante];
+GO
+IF OBJECT_ID(N'[dbo].[PedidoItemMenu]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PedidoItemMenu];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -52,6 +136,7 @@ CREATE TABLE [dbo].[ItemMenuSet] (
     [Fotografia] smallint  NOT NULL,
     [Ingredientes] nvarchar(max)  NOT NULL,
     [Ativo] bit  NOT NULL,
+    [Preço] float  NOT NULL,
     [Categoria_Id] int  NOT NULL
 );
 GO
