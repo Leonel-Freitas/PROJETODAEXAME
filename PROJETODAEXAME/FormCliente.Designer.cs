@@ -46,6 +46,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button2
@@ -57,6 +60,7 @@
             this.button2.TabIndex = 84;
             this.button2.Text = "->";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -199,11 +203,44 @@
             this.textBox1.Size = new System.Drawing.Size(200, 22);
             this.textBox1.TabIndex = 67;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(452, 262);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 35);
+            this.button3.TabIndex = 86;
+            this.button3.Text = "Edit";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(452, 61);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(118, 180);
+            this.listBox1.TabIndex = 87;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(675, 61);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(155, 180);
+            this.listBox2.TabIndex = 88;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 513);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
@@ -224,6 +261,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "FormCliente";
             this.Text = "FormClientes";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +287,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

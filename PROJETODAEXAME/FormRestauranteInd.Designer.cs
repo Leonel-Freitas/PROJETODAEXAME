@@ -83,7 +83,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(602, 299);
+            this.checkBox3.Location = new System.Drawing.Point(602, 141);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(59, 20);
             this.checkBox3.TabIndex = 155;
@@ -94,7 +94,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(602, 133);
+            this.checkBox1.Location = new System.Drawing.Point(602, 295);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(59, 20);
             this.checkBox1.TabIndex = 154;
@@ -143,16 +143,18 @@
             this.checkBox6.TabIndex = 149;
             this.checkBox6.Text = "Não Ativo";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(597, 179);
+            this.label15.Location = new System.Drawing.Point(597, 21);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(140, 29);
             this.label15.TabIndex = 148;
             this.label15.Text = "Categorias";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -175,12 +177,13 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(728, 123);
+            this.checkBox2.Location = new System.Drawing.Point(728, 285);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(88, 20);
             this.checkBox2.TabIndex = 145;
             this.checkBox2.Text = "Não Ativo";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label13
             // 
@@ -195,30 +198,33 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(574, 212);
+            this.label14.Location = new System.Drawing.Point(574, 54);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 16);
             this.label14.TabIndex = 143;
             this.label14.Text = "Nome";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(602, 231);
+            this.listBox3.Location = new System.Drawing.Point(602, 73);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(226, 52);
             this.listBox3.TabIndex = 142;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(728, 299);
+            this.checkBox4.Location = new System.Drawing.Point(728, 141);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(88, 20);
             this.checkBox4.TabIndex = 141;
             this.checkBox4.Text = "Não Ativo";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // button3
             // 
@@ -245,7 +251,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(597, 4);
+            this.label12.Location = new System.Drawing.Point(597, 166);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 29);
             this.label12.TabIndex = 138;
@@ -254,7 +260,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(574, 46);
+            this.label11.Location = new System.Drawing.Point(574, 208);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 16);
             this.label11.TabIndex = 137;
@@ -264,7 +270,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(602, 65);
+            this.listBox2.Location = new System.Drawing.Point(602, 227);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(226, 52);
             this.listBox2.TabIndex = 136;

@@ -26,11 +26,20 @@ namespace PROJETODAEXAME
         public short Fotografia { get; set; }
         public string Ingredientes { get; set; }
         public bool Ativo { get; set; }
+        public double Preço { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Restaurante> Restaurante { get; set; }
         public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedido { get; set; }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
+
+   
+
     }
 }

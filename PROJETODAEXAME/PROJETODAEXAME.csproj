@@ -61,8 +61,21 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CompraTotal.cs" />
     <Compile Include="Estado.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCodigo.Designer.cs">
+      <DependentUpon>FormCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestaoPedi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestaoPedi.Designer.cs">
+      <DependentUpon>FormGestaoPedi.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -103,6 +116,7 @@
     <Compile Include="ItemMenu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="LinhaCompra.cs" />
     <Compile Include="MetodoPagamento.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -141,6 +155,12 @@
     <Compile Include="Trabalhador.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormCodigo.resx">
+      <DependentUpon>FormCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestaoPedi.resx">
+      <DependentUpon>FormGestaoPedi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>

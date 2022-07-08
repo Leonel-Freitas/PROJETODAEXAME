@@ -47,9 +47,9 @@ namespace PROJETODAEXAME
             trabalhador.Restaurante = restaurante;
 
 
-             model1Container.MoradaSet.Add(morada);
-             model1Container.PessoaSet.Add(trabalhador);
-             model1Container.SaveChanges();
+            model1Container.MoradaSet.Add(morada);
+            model1Container.PessoaSet.Add(trabalhador);
+            model1Container.SaveChanges();
 
             textBox1.Clear();
             textBox2.Clear();
@@ -57,6 +57,8 @@ namespace PROJETODAEXAME
             textBox4.Clear();
             textBox5.Clear();
             textBox6.Clear();
+            textBox7.Clear();
+            textBox8.Clear();
 
 
         }
@@ -94,16 +96,11 @@ namespace PROJETODAEXAME
                 listBox4.Items.Add(metodoPagamento);
             }
 
-            List<ItemMenu> listaMenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
-
-            foreach (ItemMenu menu in listaMenu)
-            {
-                listBox2.Items.Add(menu);
-            }
+            
         }
 
 
-    
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -114,17 +111,234 @@ namespace PROJETODAEXAME
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
+            ItemMenu itemMenu = (ItemMenu)listBox2.SelectedItem;
             checkBox2.Checked = !checkBox1.Checked;
+            if (listBox2.SelectedItem == null)
+            {
+
+                return;
+            }
+            else
+
+            {
+
+
+                if (checkBox1.Checked == true)
+                {
+                    itemMenu.Ativo = true;
+                }
+                else
+
+                {
+                    itemMenu.Ativo = false;
+                }
+
+
+
+
+                model1Container.SaveChanges();
+                listBox2.ClearSelected();
+            }
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
+            Categoria categoria = (Categoria)listBox3.SelectedItem;
             checkBox4.Checked = !checkBox3.Checked;
+            if (listBox3.SelectedItem == null)
+            {
+
+                return;
+            }
+            else
+
+            {
+
+
+                if (checkBox3.Checked == true)
+                {
+                    categoria.Ativo = true;
+                }
+                else
+
+                {
+                    categoria.Ativo = false;
+                }
+
+
+
+
+                model1Container.SaveChanges();
+                listBox3.ClearSelected();
+                
+            }
         }
 
         private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
+            MetodoPagamento metodoPagamento = (MetodoPagamento)listBox4.SelectedItem;
             checkBox6.Checked = !checkBox5.Checked;
+            if (listBox4.SelectedItem == null)
+            {
+
+                return;
+            }
+            else
+
+            {
+
+
+                if (checkBox5.Checked == true)
+                {
+                    metodoPagamento.Ativo = true;
+                }
+                else
+
+                {
+                    metodoPagamento.Ativo = false;
+                }
+
+
+
+
+                model1Container.SaveChanges();
+                listBox4.ClearSelected();
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            ItemMenu itemmenu = (ItemMenu)listBox2.SelectedItem;
+            checkBox1.Checked = !checkBox2.Checked;
+            if (listBox2.SelectedItem == null)
+            {
+
+                return;
+            }
+            else
+
+            {
+
+
+                if (checkBox2.Checked == true)
+                {
+                    itemmenu.Ativo = false;
+                }
+                else
+
+                {
+                    itemmenu.Ativo = true;
+                }
+
+
+
+
+                model1Container.SaveChanges();
+                listBox2.ClearSelected();
+            }
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            Categoria categoria = (Categoria)listBox3.SelectedItem;
+            checkBox3.Checked = !checkBox4.Checked;
+            if (listBox3.SelectedItem == null)
+            {
+
+                return;
+            }
+            else
+
+            {
+
+
+                if (checkBox4.Checked == true)
+                {
+                    categoria.Ativo = false;
+                }
+                else
+
+                {
+                    categoria.Ativo = true;
+                }
+
+
+
+
+                model1Container.SaveChanges();
+                listBox3.ClearSelected();
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            MetodoPagamento metodoPagamento = (MetodoPagamento)listBox4.SelectedItem;
+            checkBox5.Checked = !checkBox6.Checked;
+            if (listBox4.SelectedItem == null)
+            {
+
+                return;
+            }
+            else
+
+            {
+
+
+                if (checkBox6.Checked == true)
+                {
+                    metodoPagamento.Ativo = false;
+                }
+                else
+
+                {
+                    metodoPagamento.Ativo = true;
+                }
+
+
+
+
+                model1Container.SaveChanges();
+                listBox4.ClearSelected();
+            }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+            Categoria categoria = (Categoria)listBox3.SelectedItem;
+            ItemMenu menu = new ItemMenu();
+            if (listBox3.SelectedItem == null)
+            {
+                return;
+            }
+
+
+            List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
+
+
+            IEnumerable<ItemMenu> MenuAndando = from itemmenu in listamenu
+                                                where itemmenu.Categoria == categoria
+                                                where itemmenu.Ativo == true
+                                                select itemmenu;
+
+            foreach (ItemMenu itemmenu in MenuAndando)
+            {
+                listBox2.Items.Add(itemmenu);
+            }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

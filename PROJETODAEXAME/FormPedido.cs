@@ -60,27 +60,45 @@ namespace PROJETODAEXAME
                 if (categoria.Ativo == true)
                     listBox1.Items.Add(categoria);
             }
+
+            List<Pedido> listaPedidos = model1Container.PedidoSet.ToList<Pedido>();
+
+            foreach (Pedido pedido in listaPedidos)
+            {
+                if (pedido.Estado.TipoEstado == "Recebido" || pedido.Estado.TipoEstado == "Em Processamento")
+                   listBox3.Items.Add(pedido);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Estado estado = new Estado();
             ItemMenu menu = (ItemMenu)listBox2.SelectedItem;
             Trabalhador trabalhador = (Trabalhador)comboBox1.SelectedItem;
             Cliente cliente = (Cliente)comboBox2.SelectedItem;
             Pedido pedido = new Pedido();
+            string estadopedido = "Recebido";
 
+            decimal decima = Convert.ToDecimal(total);
             pedido.Trabalhador = trabalhador;
             pedido.Cliente = cliente;
-            pedido.ValorTotal = valorCalcu();
+            pedido.ValorTotal = decima;
+            estado.TipoEstado = estadopedido;
+            pedido.Estado = estado;
 
             model1Container.PedidoSet.Add(pedido);
             model1Container.SaveChanges();
+
+            listBox1.ClearSelected();
+            listBox2.ClearSelected();
+            listBox4.ClearSelected();
+            listBox4.Items.Clear();
         }
 
-        private decimal valorCalcu()
+        private void valorCalcu(double valor)
         {
-            decimal result = 0;
-            return result;
+            return;
         }
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -123,6 +141,44 @@ namespace PROJETODAEXAME
             }
             ItemMenu menu = (ItemMenu)listBox2.SelectedItem;
 
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var myForm = new FormGestaoPedi();
+            myForm.Show();
+            this.Close();
+        }
+        double total = 0;
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            ItemMenu item = (ItemMenu)listBox2.SelectedItem;
+            listBox4.Items.Add(item.Nome);
+
+            total += item.Preço;
+            labelClienteTotal.Text = total.ToString();
+
+
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ItemMenu item = (ItemMenu)listBox2.SelectedItem;
+            listBox4.Items.Remove(item.Nome);
+
+            total -= item.Preço;
+            labelClienteTotal.Text = total.ToString();
         }
     }
 }

@@ -39,15 +39,20 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(302, 313);
+            this.button1.Location = new System.Drawing.Point(426, 381);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 35);
+            this.button1.Size = new System.Drawing.Size(149, 46);
             this.button1.TabIndex = 103;
-            this.button1.Text = "button1";
+            this.button1.Text = "Adicionar Pedido";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -59,6 +64,7 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(149, 180);
             this.listBox3.TabIndex = 102;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -110,7 +116,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 66);
+            this.label1.Location = new System.Drawing.Point(20, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 96;
@@ -144,11 +150,65 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 93;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(628, 307);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 40);
+            this.button2.TabIndex = 104;
+            this.button2.Text = "Gerir Pedidos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(226, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "Menu";
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 16;
+            this.listBox4.Location = new System.Drawing.Point(426, 105);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(149, 180);
+            this.listBox4.TabIndex = 106;
+            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(229, 307);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(139, 46);
+            this.button4.TabIndex = 107;
+            this.button4.Text = "Adicionar Menu";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(426, 307);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(149, 46);
+            this.button5.TabIndex = 108;
+            this.button5.Text = "Eleminar Linha";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // FormPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 463);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.comboBox3);
@@ -181,5 +241,10 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
