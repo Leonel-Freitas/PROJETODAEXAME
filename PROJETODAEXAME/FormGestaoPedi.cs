@@ -25,26 +25,26 @@ namespace PROJETODAEXAME
 
             foreach (Pedido pedido in listaPedidos)
             {
-                   listBox1.Items.Add(pedido);
+                   listBoxPedidos.Items.Add(pedido);
             }
             List<MetodoPagamento> listaPagamento = model1Container.MetodoPagamentoSet.ToList<MetodoPagamento>();
 
             foreach (MetodoPagamento pagamento in listaPagamento)
             {
-                comboBox2.Items.Add(pagamento);
+                comboBoxMetPag.Items.Add(pagamento);
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == null)
+            if (listBoxPedidos.SelectedItem == null)
             {
                 return;
             }
 
-            Pedido pedido = (Pedido)listBox1.SelectedItem;
+            Pedido pedido = (Pedido)listBoxPedidos.SelectedItem;
 
-            if (comboBox1.SelectedIndex.ToString() == "0")
+            if (comboBoxEstado.SelectedIndex.ToString() == "0")
             {
                 pedido.Estado.TipoEstado = "Cancelado";
             }
@@ -56,7 +56,7 @@ namespace PROJETODAEXAME
             
 
             model1Container.SaveChanges();
-            listBox1.ClearSelected();
+            listBoxPedidos.ClearSelected();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace PROJETODAEXAME
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Pedido pedido = (Pedido)listBox1.SelectedItem;
+            Pedido pedido = (Pedido)listBoxPedidos.SelectedItem;
             //string valor = Convert.ToString(pedido.ValorTotal);
             //label2.Text = valor;
         }
@@ -80,8 +80,8 @@ namespace PROJETODAEXAME
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pedido pedido = (Pedido)listBox1.SelectedItem;
-            MetodoPagamento metodoPagamento = (MetodoPagamento)comboBox2.SelectedItem;
+            Pedido pedido = (Pedido)listBoxPedidos.SelectedItem;
+            MetodoPagamento metodoPagamento = (MetodoPagamento)comboBoxMetPag.SelectedItem;
             Pagamento pagamento = new Pagamento();
             
 
@@ -95,8 +95,8 @@ namespace PROJETODAEXAME
             model1Container.PagamentoSet.Add(pagamento);
             model1Container.SaveChanges();
 
-            listBox1.ClearSelected();
-            comboBox2.ResetText();
+            listBoxPedidos.ClearSelected();
+            comboBoxMetPag.ResetText();
         }
 
         private void button2_Click(object sender, EventArgs e)

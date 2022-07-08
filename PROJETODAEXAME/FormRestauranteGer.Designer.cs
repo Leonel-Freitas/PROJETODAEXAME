@@ -32,25 +32,25 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxMetPag = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxCate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxPais = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxCodPos = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCid = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxRua = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNomRes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button4
@@ -93,12 +93,12 @@
             this.label12.TabIndex = 121;
             this.label12.Text = "Metodo de Pagamento";
             // 
-            // textBox7
+            // textBoxMetPag
             // 
-            this.textBox7.Location = new System.Drawing.Point(645, 146);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 22);
-            this.textBox7.TabIndex = 120;
+            this.textBoxMetPag.Location = new System.Drawing.Point(645, 146);
+            this.textBoxMetPag.Name = "textBoxMetPag";
+            this.textBoxMetPag.Size = new System.Drawing.Size(200, 22);
+            this.textBoxMetPag.TabIndex = 120;
             // 
             // button2
             // 
@@ -139,12 +139,12 @@
             this.label10.TabIndex = 116;
             this.label10.Text = "Nome da Categoria";
             // 
-            // textBox6
+            // textBoxCate
             // 
-            this.textBox6.Location = new System.Drawing.Point(358, 146);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 22);
-            this.textBox6.TabIndex = 115;
+            this.textBoxCate.Location = new System.Drawing.Point(358, 146);
+            this.textBoxCate.Name = "textBoxCate";
+            this.textBoxCate.Size = new System.Drawing.Size(200, 22);
+            this.textBoxCate.TabIndex = 115;
             // 
             // label7
             // 
@@ -155,12 +155,12 @@
             this.label7.TabIndex = 114;
             this.label7.Text = "Pais";
             // 
-            // textBox5
+            // textBoxPais
             // 
-            this.textBox5.Location = new System.Drawing.Point(170, 299);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 22);
-            this.textBox5.TabIndex = 113;
+            this.textBoxPais.Location = new System.Drawing.Point(170, 299);
+            this.textBoxPais.Name = "textBoxPais";
+            this.textBoxPais.Size = new System.Drawing.Size(141, 22);
+            this.textBoxPais.TabIndex = 113;
             // 
             // label6
             // 
@@ -171,12 +171,12 @@
             this.label6.TabIndex = 112;
             this.label6.Text = "Codigo Postal";
             // 
-            // textBox4
+            // textBoxCodPos
             // 
-            this.textBox4.Location = new System.Drawing.Point(170, 274);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 22);
-            this.textBox4.TabIndex = 111;
+            this.textBoxCodPos.Location = new System.Drawing.Point(170, 274);
+            this.textBoxCodPos.Name = "textBoxCodPos";
+            this.textBoxCodPos.Size = new System.Drawing.Size(141, 22);
+            this.textBoxCodPos.TabIndex = 111;
             // 
             // label5
             // 
@@ -187,12 +187,12 @@
             this.label5.TabIndex = 110;
             this.label5.Text = "Cidade";
             // 
-            // textBox3
+            // textBoxCid
             // 
-            this.textBox3.Location = new System.Drawing.Point(170, 246);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 22);
-            this.textBox3.TabIndex = 109;
+            this.textBoxCid.Location = new System.Drawing.Point(170, 246);
+            this.textBoxCid.Name = "textBoxCid";
+            this.textBoxCid.Size = new System.Drawing.Size(141, 22);
+            this.textBoxCid.TabIndex = 109;
             // 
             // label4
             // 
@@ -203,12 +203,12 @@
             this.label4.TabIndex = 108;
             this.label4.Text = "Rua";
             // 
-            // textBox2
+            // textBoxRua
             // 
-            this.textBox2.Location = new System.Drawing.Point(170, 218);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 22);
-            this.textBox2.TabIndex = 107;
+            this.textBoxRua.Location = new System.Drawing.Point(170, 218);
+            this.textBoxRua.Name = "textBoxRua";
+            this.textBoxRua.Size = new System.Drawing.Size(141, 22);
+            this.textBoxRua.TabIndex = 107;
             // 
             // label8
             // 
@@ -248,12 +248,12 @@
             this.label2.TabIndex = 103;
             this.label2.Text = "Nome do Restaurante";
             // 
-            // textBox1
+            // textBoxNomRes
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 102;
+            this.textBoxNomRes.Location = new System.Drawing.Point(54, 146);
+            this.textBoxNomRes.Name = "textBoxNomRes";
+            this.textBoxNomRes.Size = new System.Drawing.Size(200, 22);
+            this.textBoxNomRes.TabIndex = 102;
             // 
             // FormRestauranteGer
             // 
@@ -264,25 +264,25 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxMetPag);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxCate);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxPais);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxCodPos);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxCid);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxRua);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNomRes);
             this.Name = "FormRestauranteGer";
             this.Text = "FormRestauranteGer";
             this.ResumeLayout(false);
@@ -296,24 +296,24 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxMetPag;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxCate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxPais;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxCodPos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCid;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxRua;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNomRes;
     }
 }

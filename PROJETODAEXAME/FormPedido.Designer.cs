@@ -28,43 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.buttonAddPed = new System.Windows.Forms.Button();
+            this.listBoxPedido = new System.Windows.Forms.ListBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.labelClienteTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonVoltar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxMenu = new System.Windows.Forms.ListBox();
+            this.listBoxCate = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonGerPedi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.listBoxCart = new System.Windows.Forms.ListBox();
+            this.buttonAddMen = new System.Windows.Forms.Button();
+            this.buttonElem = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAddPed
             // 
-            this.button1.Location = new System.Drawing.Point(426, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 46);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Adicionar Pedido";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAddPed.Location = new System.Drawing.Point(426, 381);
+            this.buttonAddPed.Name = "buttonAddPed";
+            this.buttonAddPed.Size = new System.Drawing.Size(149, 46);
+            this.buttonAddPed.TabIndex = 103;
+            this.buttonAddPed.Text = "Adicionar Pedido";
+            this.buttonAddPed.UseVisualStyleBackColor = true;
+            this.buttonAddPed.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox3
+            // listBoxPedido
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(628, 93);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(149, 180);
-            this.listBox3.TabIndex = 102;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            this.listBoxPedido.FormattingEnabled = true;
+            this.listBoxPedido.ItemHeight = 16;
+            this.listBoxPedido.Location = new System.Drawing.Point(628, 93);
+            this.listBoxPedido.Name = "listBoxPedido";
+            this.listBoxPedido.Size = new System.Drawing.Size(149, 180);
+            this.listBoxPedido.TabIndex = 102;
+            
             // 
             // comboBox3
             // 
@@ -102,16 +106,16 @@
             this.label6.TabIndex = 98;
             this.label6.Text = "Total:";
             // 
-            // button3
+            // buttonVoltar
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(673, 381);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 35);
-            this.button3.TabIndex = 97;
-            this.button3.Text = "->";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.buttonVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVoltar.Location = new System.Drawing.Point(673, 381);
+            this.buttonVoltar.Name = "buttonVoltar";
+            this.buttonVoltar.Size = new System.Drawing.Size(104, 35);
+            this.buttonVoltar.TabIndex = 97;
+            this.buttonVoltar.Text = "->";
+            this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // label1
             // 
@@ -122,25 +126,25 @@
             this.label1.TabIndex = 96;
             this.label1.Text = "Categoria";
             // 
-            // listBox2
+            // listBoxMenu
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(229, 105);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(149, 180);
-            this.listBox2.TabIndex = 95;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            this.listBoxMenu.FormattingEnabled = true;
+            this.listBoxMenu.ItemHeight = 16;
+            this.listBoxMenu.Location = new System.Drawing.Point(229, 105);
+            this.listBoxMenu.Name = "listBoxMenu";
+            this.listBoxMenu.Size = new System.Drawing.Size(149, 180);
+            this.listBoxMenu.TabIndex = 95;
+            this.listBoxMenu.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
-            // listBox1
+            // listBoxCate
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(23, 105);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(148, 180);
-            this.listBox1.TabIndex = 94;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
+            this.listBoxCate.FormattingEnabled = true;
+            this.listBoxCate.ItemHeight = 16;
+            this.listBoxCate.Location = new System.Drawing.Point(23, 105);
+            this.listBoxCate.Name = "listBoxCate";
+            this.listBoxCate.Size = new System.Drawing.Size(148, 180);
+            this.listBoxCate.TabIndex = 94;
+            this.listBoxCate.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // comboBox1
             // 
@@ -150,15 +154,15 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 93;
             // 
-            // button2
+            // buttonGerPedi
             // 
-            this.button2.Location = new System.Drawing.Point(628, 307);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 40);
-            this.button2.TabIndex = 104;
-            this.button2.Text = "Gerir Pedidos";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonGerPedi.Location = new System.Drawing.Point(628, 307);
+            this.buttonGerPedi.Name = "buttonGerPedi";
+            this.buttonGerPedi.Size = new System.Drawing.Size(132, 40);
+            this.buttonGerPedi.TabIndex = 104;
+            this.buttonGerPedi.Text = "Gerir Pedidos";
+            this.buttonGerPedi.UseVisualStyleBackColor = true;
+            this.buttonGerPedi.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -169,56 +173,96 @@
             this.label2.TabIndex = 105;
             this.label2.Text = "Menu";
             // 
-            // listBox4
+            // listBoxCart
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(426, 105);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(149, 180);
-            this.listBox4.TabIndex = 106;
-            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
+            this.listBoxCart.FormattingEnabled = true;
+            this.listBoxCart.ItemHeight = 16;
+            this.listBoxCart.Location = new System.Drawing.Point(426, 105);
+            this.listBoxCart.Name = "listBoxCart";
+            this.listBoxCart.Size = new System.Drawing.Size(149, 180);
+            this.listBoxCart.TabIndex = 106;
+            
             // 
-            // button4
+            // buttonAddMen
             // 
-            this.button4.Location = new System.Drawing.Point(229, 307);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 46);
-            this.button4.TabIndex = 107;
-            this.button4.Text = "Adicionar Menu";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonAddMen.Location = new System.Drawing.Point(229, 307);
+            this.buttonAddMen.Name = "buttonAddMen";
+            this.buttonAddMen.Size = new System.Drawing.Size(139, 46);
+            this.buttonAddMen.TabIndex = 107;
+            this.buttonAddMen.Text = "Adicionar Menu";
+            this.buttonAddMen.UseVisualStyleBackColor = true;
+            this.buttonAddMen.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // buttonElem
             // 
-            this.button5.Location = new System.Drawing.Point(426, 307);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 46);
-            this.button5.TabIndex = 108;
-            this.button5.Text = "Eleminar Linha";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonElem.Location = new System.Drawing.Point(426, 307);
+            this.buttonElem.Name = "buttonElem";
+            this.buttonElem.Size = new System.Drawing.Size(149, 46);
+            this.buttonElem.TabIndex = 108;
+            this.buttonElem.Text = "Eleminar Linha";
+            this.buttonElem.UseVisualStyleBackColor = true;
+            this.buttonElem.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(423, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 16);
+            this.label3.TabIndex = 109;
+            this.label3.Text = "Cart";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(226, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 110;
+            this.label4.Text = "Restaurante";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(370, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 111;
+            this.label5.Text = "Funcionario";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(511, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 16);
+            this.label7.TabIndex = 112;
+            this.label7.Text = "Cliente";
             // 
             // FormPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 463);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.buttonElem);
+            this.Controls.Add(this.buttonAddMen);
+            this.Controls.Add(this.listBoxCart);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.buttonGerPedi);
+            this.Controls.Add(this.buttonAddPed);
+            this.Controls.Add(this.listBoxPedido);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.labelClienteTotal);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxMenu);
+            this.Controls.Add(this.listBoxCate);
             this.Controls.Add(this.comboBox1);
             this.Name = "FormPedido";
             this.Text = "FormPedido";
@@ -230,21 +274,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button buttonAddPed;
+        private System.Windows.Forms.ListBox listBoxPedido;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label labelClienteTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxMenu;
+        private System.Windows.Forms.ListBox listBoxCate;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonGerPedi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox listBoxCart;
+        private System.Windows.Forms.Button buttonAddMen;
+        private System.Windows.Forms.Button buttonElem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }

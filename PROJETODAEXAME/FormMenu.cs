@@ -20,31 +20,31 @@ namespace PROJETODAEXAME
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listBox3.SelectedItem == null)
+            if (listBoxCategorias.SelectedItem == null)
             {
                 return;
             }
             ItemMenu menu = new ItemMenu();
-            Categoria categoria = (Categoria)listBox3.SelectedItem;
+            Categoria categoria = (Categoria)listBoxCategorias.SelectedItem;
 
 
-            double preço = Convert.ToDouble(textBox4.Text);
-            short resultado = Convert.ToInt16(textBox2.Text);
-            menu.Nome = textBox1.Text;
+            double preço = Convert.ToDouble(textBoxPreco.Text);
+            short resultado = Convert.ToInt16(textBoxFotografia.Text);
+            menu.Nome = TextBoxNome.Text;
             menu.Categoria = categoria;
             menu.Fotografia = resultado;
-            menu.Ingredientes = textBox3.Text;
+            menu.Ingredientes = textBoxIngred.Text;
             menu.Preço = preço;
             
 
             model1Container.ItemMenuSet.Add(menu);
             model1Container.SaveChanges();
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            listBox3.ClearSelected();
+            TextBoxNome.Clear();
+            textBoxFotografia.Clear();
+            textBoxIngred.Clear();
+            textBoxPreco.Clear();
+            listBoxCategorias.ClearSelected();
         }
 
        
@@ -57,7 +57,7 @@ namespace PROJETODAEXAME
 
             foreach (Categoria categoria in listaCategorias)
             {
-                listBox3.Items.Add(categoria);
+                listBoxCategorias.Items.Add(categoria);
             }
         }
 

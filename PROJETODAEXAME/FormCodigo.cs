@@ -34,12 +34,16 @@ namespace PROJETODAEXAME
             codigo.Descrição = textBox2.Text;
             if(listBox1.SelectedItem.ToString() == "0")
             {
-
+                //codigo.tipo = "Global";
+                button1.Enabled = true;
             }
+               // codigo.tipo = "Item"
+                button2.Enabled = true;
         }
 
         private void FormCodigo_Load(object sender, EventArgs e)
         {
+            //tentativa do formulario de codigo
             model1Container = new Model1Container();
 
             List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();

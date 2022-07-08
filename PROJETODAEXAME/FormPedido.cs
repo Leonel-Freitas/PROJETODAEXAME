@@ -25,6 +25,7 @@ namespace PROJETODAEXAME
         {
             model1Container = new Model1Container();
 
+            //adicionar os valores para as listboxes correspondidas
             List<Pessoa> listaPessoas = model1Container.PessoaSet.ToList<Pessoa>();
 
             foreach (Pessoa pessoa in listaPessoas)
@@ -58,7 +59,7 @@ namespace PROJETODAEXAME
             foreach (Categoria categoria in listacategoria)
             {
                 if (categoria.Ativo == true)
-                    listBox1.Items.Add(categoria);
+                    listBoxCate.Items.Add(categoria);
             }
 
             List<Pedido> listaPedidos = model1Container.PedidoSet.ToList<Pedido>();
@@ -66,20 +67,21 @@ namespace PROJETODAEXAME
             foreach (Pedido pedido in listaPedidos)
             {
                 if (pedido.Estado.TipoEstado == "Recebido" || pedido.Estado.TipoEstado == "Em Processamento")
-                   listBox3.Items.Add(pedido);
+                   listBoxPedido.Items.Add(pedido);
             }
-
+            //Só aparece os pedidos que estão como Recebido e em processamento
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Estado estado = new Estado();
-            ItemMenu menu = (ItemMenu)listBox2.SelectedItem;
+            ItemMenu menu = (ItemMenu)listBoxMenu.SelectedItem;
             Trabalhador trabalhador = (Trabalhador)comboBox1.SelectedItem;
             Cliente cliente = (Cliente)comboBox2.SelectedItem;
             Pedido pedido = new Pedido();
             string estadopedido = "Recebido";
 
+            //codigo simples quando o pedido é efetuado o estado fica como "Recebido"
             decimal decima = Convert.ToDecimal(total);
             pedido.Trabalhador = trabalhador;
             pedido.Cliente = cliente;
@@ -90,29 +92,25 @@ namespace PROJETODAEXAME
             model1Container.PedidoSet.Add(pedido);
             model1Container.SaveChanges();
 
-            listBox1.ClearSelected();
-            listBox2.ClearSelected();
-            listBox4.ClearSelected();
-            listBox4.Items.Clear();
+            listBoxCate.ClearSelected();
+            listBoxMenu.ClearSelected();
+            listBoxCart.ClearSelected();
+            listBoxCart.Items.Clear();
         }
 
-        private void valorCalcu(double valor)
-        {
-            return;
-        }
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            listBox2.Items.Clear();
-            Categoria categoria = (Categoria)listBox1.SelectedItem;
+            listBoxMenu.Items.Clear();
+            Categoria categoria = (Categoria)listBoxCate.SelectedItem;
             ItemMenu menu = new ItemMenu();
             
-            if (listBox1.SelectedItem == null)
+            if (listBoxCate.SelectedItem == null)
             {
                 return;
             }
 
-
+            //se selecionar uma categoria na listbox categorias vai aparecer o menu dessas categorias
             List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
 
             
@@ -123,7 +121,7 @@ namespace PROJETODAEXAME
 
             foreach (ItemMenu itemmenu in MenuAndando)
             {
-                listBox2.Items.Add(itemmenu);
+                listBoxMenu.Items.Add(itemmenu);
             }
         }
 
@@ -137,18 +135,15 @@ namespace PROJETODAEXAME
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == null)
+            if (listBoxCate.SelectedItem == null)
             {
                 return;
             }
-            ItemMenu menu = (ItemMenu)listBox2.SelectedItem;
+            ItemMenu menu = (ItemMenu)listBoxMenu.SelectedItem;
 
         }
 
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -156,12 +151,13 @@ namespace PROJETODAEXAME
             myForm.Show();
             this.Close();
         }
+        //variavel para fazer a soma do cart
         double total = 0;
         private void button4_Click(object sender, EventArgs e)
         {
 
-            ItemMenu item = (ItemMenu)listBox2.SelectedItem;
-            listBox4.Items.Add(item.Nome);
+            ItemMenu item = (ItemMenu)listBoxMenu.SelectedItem;
+            listBoxCart.Items.Add(item.Nome);
 
             total += item.Preço;
             labelClienteTotal.Text = total.ToString();
@@ -169,15 +165,11 @@ namespace PROJETODAEXAME
 
         }
 
-        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ItemMenu item = (ItemMenu)listBox2.SelectedItem;
-            listBox4.Items.Remove(item.Nome);
+            ItemMenu item = (ItemMenu)listBoxMenu.SelectedItem;
+            listBoxCart.Items.Remove(item.Nome);
 
             total -= item.Preço;
             labelClienteTotal.Text = total.ToString();

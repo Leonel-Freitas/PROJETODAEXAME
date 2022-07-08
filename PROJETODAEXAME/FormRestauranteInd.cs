@@ -20,30 +20,30 @@ namespace PROJETODAEXAME
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text))
+            if (string.IsNullOrEmpty(NomeFunc.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCidad.Text) || string.IsNullOrEmpty(textBoxCodPost.Text) || string.IsNullOrEmpty(textBoxPais.Text) || string.IsNullOrEmpty(textBoxTele.Text))
             {
                 return;
             }
 
             Trabalhador trabalhador = new Trabalhador();
             Morada morada = new Morada();
-            Restaurante restaurante = (Restaurante)listBox1.SelectedItem;
-            if (listBox1.SelectedItem == null)
+            Restaurante restaurante = (Restaurante)listBoxRestaurantes.SelectedItem;
+            if (listBoxRestaurantes.SelectedItem == null)
             {
 
                 return;
             }
 
-
-            trabalhador.Nome = textBox1.Text;
-            morada.Rua = textBox2.Text;
-            morada.Cidade = textBox3.Text;
-            morada.CodPostal = textBox4.Text;
-            morada.Pais = textBox5.Text;
-            trabalhador.Telemovel = Int32.Parse(textBox6.Text);
+            //codigo basico como o cliente
+            trabalhador.Nome = NomeFunc.Text;
+            morada.Rua = textBoxRua.Text;
+            morada.Cidade = textBoxCidad.Text;
+            morada.CodPostal = textBoxCodPost.Text;
+            morada.Pais = textBoxPais.Text;
+            trabalhador.Telemovel = Int32.Parse(textBoxTele.Text);
             trabalhador.Morada = morada;
-            trabalhador.Salario = Convert.ToDecimal(textBox7.Text);
-            trabalhador.Posicao = textBox8.Text;
+            trabalhador.Salario = Convert.ToDecimal(textBoxSalario.Text);
+            trabalhador.Posicao = textBoxPosicao.Text;
             trabalhador.Restaurante = restaurante;
 
 
@@ -51,14 +51,14 @@ namespace PROJETODAEXAME
             model1Container.PessoaSet.Add(trabalhador);
             model1Container.SaveChanges();
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
-            textBox8.Clear();
+            NomeFunc.Clear();
+            textBoxRua.Clear();
+            textBoxCidad.Clear();
+            textBoxCodPost.Clear();
+            textBoxPais.Clear();
+            textBoxTele.Clear();
+            textBoxSalario.Clear();
+            textBoxPosicao.Clear();
 
 
         }
@@ -79,24 +79,27 @@ namespace PROJETODAEXAME
 
             foreach (Restaurante restaurante in listaRestaurantes)
             {
-                listBox1.Items.Add(restaurante);
+                listBoxRestaurantes.Items.Add(restaurante);
             }
+            //preencher a listbox restaurante
 
             List<Categoria> listaCategorias = model1Container.CategoriaSet.ToList<Categoria>();
 
             foreach (Categoria categoria in listaCategorias)
             {
-                listBox3.Items.Add(categoria);
+                listBoxCategorias.Items.Add(categoria);
             }
+            //preencher a listbox categoria
 
             List<MetodoPagamento> listaMetPag = model1Container.MetodoPagamentoSet.ToList<MetodoPagamento>();
 
             foreach (MetodoPagamento metodoPagamento in listaMetPag)
             {
-                listBox4.Items.Add(metodoPagamento);
+                listBoxPagamento.Items.Add(metodoPagamento);
             }
+            //preencher a listbox MetodoPagamento
 
-            
+
         }
 
 
@@ -111,9 +114,9 @@ namespace PROJETODAEXAME
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
-            ItemMenu itemMenu = (ItemMenu)listBox2.SelectedItem;
-            checkBox2.Checked = !checkBox1.Checked;
-            if (listBox2.SelectedItem == null)
+            ItemMenu itemMenu = (ItemMenu)listBoxMenu.SelectedItem;
+            checkBoxNAtivoMe.Checked = !checkBoxAtivoMe.Checked;
+            if (listBoxMenu.SelectedItem == null)
             {
 
                 return;
@@ -123,7 +126,7 @@ namespace PROJETODAEXAME
             {
 
 
-                if (checkBox1.Checked == true)
+                if (checkBoxAtivoMe.Checked == true)
                 {
                     itemMenu.Ativo = true;
                 }
@@ -137,15 +140,15 @@ namespace PROJETODAEXAME
 
 
                 model1Container.SaveChanges();
-                listBox2.ClearSelected();
+                listBoxMenu.ClearSelected();
             }
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
-            Categoria categoria = (Categoria)listBox3.SelectedItem;
-            checkBox4.Checked = !checkBox3.Checked;
-            if (listBox3.SelectedItem == null)
+            Categoria categoria = (Categoria)listBoxCategorias.SelectedItem;
+            checkBoxNAtivoCa.Checked = !checkBoxAtivoCa.Checked;
+            if (listBoxCategorias.SelectedItem == null)
             {
 
                 return;
@@ -155,7 +158,7 @@ namespace PROJETODAEXAME
             {
 
 
-                if (checkBox3.Checked == true)
+                if (checkBoxAtivoCa.Checked == true)
                 {
                     categoria.Ativo = true;
                 }
@@ -169,16 +172,16 @@ namespace PROJETODAEXAME
 
 
                 model1Container.SaveChanges();
-                listBox3.ClearSelected();
+                listBoxCategorias.ClearSelected();
                 
             }
         }
 
         private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
-            MetodoPagamento metodoPagamento = (MetodoPagamento)listBox4.SelectedItem;
-            checkBox6.Checked = !checkBox5.Checked;
-            if (listBox4.SelectedItem == null)
+            MetodoPagamento metodoPagamento = (MetodoPagamento)listBoxPagamento.SelectedItem;
+            checkBoxNAtivoPa.Checked = !checkBoxAtivoPa.Checked;
+            if (listBoxPagamento.SelectedItem == null)
             {
 
                 return;
@@ -186,9 +189,9 @@ namespace PROJETODAEXAME
             else
 
             {
+                //se uma checkbox estiver ativa a outra desativa-se e vice versa
 
-
-                if (checkBox5.Checked == true)
+                if (checkBoxAtivoPa.Checked == true)
                 {
                     metodoPagamento.Ativo = true;
                 }
@@ -202,16 +205,16 @@ namespace PROJETODAEXAME
 
 
                 model1Container.SaveChanges();
-                listBox4.ClearSelected();
+                listBoxPagamento.ClearSelected();
             }
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             
-            ItemMenu itemmenu = (ItemMenu)listBox2.SelectedItem;
-            checkBox1.Checked = !checkBox2.Checked;
-            if (listBox2.SelectedItem == null)
+            ItemMenu itemmenu = (ItemMenu)listBoxMenu.SelectedItem;
+            checkBoxAtivoMe.Checked = !checkBoxNAtivoMe.Checked;
+            if (listBoxMenu.SelectedItem == null)
             {
 
                 return;
@@ -219,9 +222,9 @@ namespace PROJETODAEXAME
             else
 
             {
+                //se uma checkbox estiver ativa a outra desativa-se e vice versa
 
-
-                if (checkBox2.Checked == true)
+                if (checkBoxNAtivoMe.Checked == true)
                 {
                     itemmenu.Ativo = false;
                 }
@@ -235,7 +238,7 @@ namespace PROJETODAEXAME
 
 
                 model1Container.SaveChanges();
-                listBox2.ClearSelected();
+                listBoxMenu.ClearSelected();
             }
 
         }
@@ -243,9 +246,9 @@ namespace PROJETODAEXAME
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             
-            Categoria categoria = (Categoria)listBox3.SelectedItem;
-            checkBox3.Checked = !checkBox4.Checked;
-            if (listBox3.SelectedItem == null)
+            Categoria categoria = (Categoria)listBoxCategorias.SelectedItem;
+            checkBoxAtivoCa.Checked = !checkBoxNAtivoCa.Checked;
+            if (listBoxCategorias.SelectedItem == null)
             {
 
                 return;
@@ -253,9 +256,9 @@ namespace PROJETODAEXAME
             else
 
             {
+                //se uma checkbox estiver ativa a outra desativa-se e vice versa
 
-
-                if (checkBox4.Checked == true)
+                if (checkBoxNAtivoCa.Checked == true)
                 {
                     categoria.Ativo = false;
                 }
@@ -269,16 +272,16 @@ namespace PROJETODAEXAME
 
 
                 model1Container.SaveChanges();
-                listBox3.ClearSelected();
+                listBoxCategorias.ClearSelected();
             }
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
             
-            MetodoPagamento metodoPagamento = (MetodoPagamento)listBox4.SelectedItem;
-            checkBox5.Checked = !checkBox6.Checked;
-            if (listBox4.SelectedItem == null)
+            MetodoPagamento metodoPagamento = (MetodoPagamento)listBoxPagamento.SelectedItem;
+            checkBoxAtivoPa.Checked = !checkBoxNAtivoPa.Checked;
+            if (listBoxPagamento.SelectedItem == null)
             {
 
                 return;
@@ -286,9 +289,9 @@ namespace PROJETODAEXAME
             else
 
             {
+                //se uma checkbox estiver ativa a outra desativa-se e vice versa
 
-
-                if (checkBox6.Checked == true)
+                if (checkBoxNAtivoPa.Checked == true)
                 {
                     metodoPagamento.Ativo = false;
                 }
@@ -302,21 +305,21 @@ namespace PROJETODAEXAME
 
 
                 model1Container.SaveChanges();
-                listBox4.ClearSelected();
+                listBoxPagamento.ClearSelected();
             }
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox2.Items.Clear();
-            Categoria categoria = (Categoria)listBox3.SelectedItem;
+            listBoxMenu.Items.Clear();
+            Categoria categoria = (Categoria)listBoxCategorias.SelectedItem;
             ItemMenu menu = new ItemMenu();
-            if (listBox3.SelectedItem == null)
+            if (listBoxCategorias.SelectedItem == null)
             {
                 return;
             }
 
-
+            //se selecionar uma categoria na listbox categorias vai aparecer o menu dessas categorias
             List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
 
 
@@ -327,18 +330,12 @@ namespace PROJETODAEXAME
 
             foreach (ItemMenu itemmenu in MenuAndando)
             {
-                listBox2.Items.Add(itemmenu);
+                listBoxMenu.Items.Add(itemmenu);
             }
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

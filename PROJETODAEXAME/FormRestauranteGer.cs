@@ -20,59 +20,59 @@ namespace PROJETODAEXAME
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text))
+            if (string.IsNullOrEmpty(textBoxNomRes.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCid.Text) || string.IsNullOrEmpty(textBoxCodPos.Text) || string.IsNullOrEmpty(textBoxPais.Text))
             {
                 return;
             }
             model1Container = new Model1Container();
             Restaurante restaurante = new Restaurante();
             Morada morada = new Morada();
-            restaurante.Nome = textBox1.Text;
-            morada.Rua = textBox2.Text;
-            morada.Cidade = textBox3.Text;
-            morada.CodPostal = textBox4.Text;
-            morada.Pais = textBox5.Text;
+            restaurante.Nome = textBoxNomRes.Text;
+            morada.Rua = textBoxRua.Text;
+            morada.Cidade = textBoxCid.Text;
+            morada.CodPostal = textBoxCodPos.Text;
+            morada.Pais = textBoxPais.Text;
             restaurante.Morada = morada;
 
             model1Container.MoradaSet.Add(morada);
             model1Container.RestauranteSet.Add(restaurante);
             model1Container.SaveChanges();
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
+            textBoxNomRes.Clear();
+            textBoxRua.Clear();
+            textBoxCid.Clear();
+            textBoxCodPos.Clear();
+            textBoxPais.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox6.Text))
+            if (string.IsNullOrEmpty(textBoxCate.Text))
             {
                 return;
             }
             model1Container = new Model1Container();
             Categoria categoria = new Categoria();
-            categoria.Nome = textBox6.Text;
+            categoria.Nome = textBoxCate.Text;
 
             model1Container.CategoriaSet.Add(categoria);
             model1Container.SaveChanges();
-            textBox6.Clear();
+            textBoxCate.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox7.Text))
+            if (string.IsNullOrEmpty(textBoxMetPag.Text))
             {
                 return;
             }
             model1Container = new Model1Container();
             MetodoPagamento pagamento = new MetodoPagamento();
-            pagamento.TipoPagamento = textBox7.Text;
+            pagamento.TipoPagamento = textBoxMetPag.Text;
 
             model1Container.MetodoPagamentoSet.Add(pagamento);
             model1Container.SaveChanges();
-            textBox7.Clear();
+            textBoxMetPag.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)

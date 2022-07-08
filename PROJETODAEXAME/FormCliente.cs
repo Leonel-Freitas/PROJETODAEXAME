@@ -20,7 +20,7 @@ namespace PROJETODAEXAME
          
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(textBox7.Text))
+            if (string.IsNullOrEmpty(textBoxNome.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCidade.Text) || string.IsNullOrEmpty(textBoxCodPost.Text) || string.IsNullOrEmpty(textBoxPais.Text) || string.IsNullOrEmpty(textBoxTele.Text) || string.IsNullOrEmpty(textBoxNumCont.Text))
             {
                 return;
             }
@@ -28,28 +28,29 @@ namespace PROJETODAEXAME
             Cliente cliente = new Cliente();
             Morada morada = new Morada();
 
-            Int32.TryParse(textBox6.Text, out int resultado);
-            Int32.TryParse(textBox7.Text, out int resultado2);
-            cliente.Nome = textBox1.Text;
-            morada.Rua = textBox2.Text;
-            morada.Cidade = textBox3.Text;
-            morada.CodPostal = textBox4.Text;
-            morada.Pais = textBox5.Text;
+            Int32.TryParse(textBoxTele.Text, out int resultado);
+            Int32.TryParse(textBoxNumCont.Text, out int resultado2);
+            cliente.Nome = textBoxNome.Text;
+            morada.Rua = textBoxRua.Text;
+            morada.Cidade = textBoxCidade.Text;
+            morada.CodPostal = textBoxCodPost.Text;
+            morada.Pais = textBoxPais.Text;
             cliente.Telemovel = resultado;
             cliente.NumContribuinte = resultado2;
             cliente.Morada = morada;
-
+            //adicionar os dados para a base de Dados
             model1Container.MoradaSet.Add(morada);
             model1Container.PessoaSet.Add(cliente);
             model1Container.SaveChanges();
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
+            //Limpar as TextBoxes
+            textBoxNome.Clear();
+            textBoxRua.Clear();
+            textBoxCidade.Clear();
+            textBoxCodPost.Clear();
+            textBoxPais.Clear();
+            textBoxTele.Clear();
+            textBoxNumCont.Clear();
 
 
 
@@ -71,7 +72,7 @@ namespace PROJETODAEXAME
             {
                 if (pessoa1 is Cliente)
                 {
-                    listBox1.Items.Add(pessoa1);
+                    Cliente.Items.Add(pessoa1);
                 }
             }
 
@@ -79,38 +80,41 @@ namespace PROJETODAEXAME
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cliente cliente = (Cliente)listBox1.SelectedItem;
+            Cliente cliente = (Cliente)Cliente.SelectedItem;
             Morada morada = new Morada();
-            Int32.TryParse(textBox6.Text, out int resultado);
-            Int32.TryParse(textBox7.Text, out int resultado2);
-            cliente.Nome = textBox1.Text;
-            morada.Rua = textBox2.Text;
-            morada.Cidade = textBox3.Text;
-            morada.CodPostal = textBox4.Text;
-            morada.Pais = textBox5.Text;
+            Int32.TryParse(textBoxTele.Text, out int resultado);
+            Int32.TryParse(textBoxNumCont.Text, out int resultado2);
+            cliente.Nome = textBoxNome.Text;
+            morada.Rua = textBoxRua.Text;
+            morada.Cidade = textBoxCidade.Text;
+            morada.CodPostal = textBoxCodPost.Text;
+            morada.Pais = textBoxPais.Text;
             cliente.Telemovel = resultado;
             cliente.NumContribuinte = resultado2;
             cliente.Morada = morada;
 
+            //editar os dados para a base de Dados
             model1Container.SaveChanges();
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
+            //Limpar as TextBoxes
+            textBoxNome.Clear();
+            textBoxRua.Clear();
+            textBoxCidade.Clear();
+            textBoxCodPost.Clear();
+            textBoxPais.Clear();
+            textBoxTele.Clear();
+            textBoxNumCont.Clear();
 
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //tentativa do produto mais consumido pelo cliente
             listBox2.Items.Clear();
-            Cliente cliente = (Cliente)listBox1.SelectedItem;
+            Cliente cliente = (Cliente)Cliente.SelectedItem;
             Pedido pedido = new Pedido();
             ItemMenu menu = new ItemMenu();
-            if (listBox1.SelectedItem == null)
+            if (Cliente.SelectedItem == null)
             {
                 return;
             }
@@ -130,9 +134,6 @@ namespace PROJETODAEXAME
             }
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

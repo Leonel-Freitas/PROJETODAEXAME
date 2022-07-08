@@ -28,79 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxAtivoPa = new System.Windows.Forms.CheckBox();
+            this.checkBoxAtivoCa = new System.Windows.Forms.CheckBox();
+            this.checkBoxAtivoMe = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxPosicao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.textBoxSalario = new System.Windows.Forms.TextBox();
+            this.checkBoxNAtivoPa = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.listBoxPagamento = new System.Windows.Forms.ListBox();
+            this.checkBoxNAtivoMe = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.listBoxCategorias = new System.Windows.Forms.ListBox();
+            this.checkBoxNAtivoCa = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxMenu = new System.Windows.Forms.ListBox();
+            this.listBoxRestaurantes = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxTele = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxPais = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxCodPost = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxRua = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NomeFunc = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // checkBox5
+            // checkBoxAtivoPa
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(602, 461);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(62, 20);
-            this.checkBox5.TabIndex = 156;
-            this.checkBox5.Text = " Ativo";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged_1);
+            this.checkBoxAtivoPa.AutoSize = true;
+            this.checkBoxAtivoPa.Location = new System.Drawing.Point(602, 461);
+            this.checkBoxAtivoPa.Name = "checkBoxAtivoPa";
+            this.checkBoxAtivoPa.Size = new System.Drawing.Size(62, 20);
+            this.checkBoxAtivoPa.TabIndex = 156;
+            this.checkBoxAtivoPa.Text = " Ativo";
+            this.checkBoxAtivoPa.UseVisualStyleBackColor = true;
+            this.checkBoxAtivoPa.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged_1);
             // 
-            // checkBox3
+            // checkBoxAtivoCa
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(602, 141);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(59, 20);
-            this.checkBox3.TabIndex = 155;
-            this.checkBox3.Text = "Ativo";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
+            this.checkBoxAtivoCa.AutoSize = true;
+            this.checkBoxAtivoCa.Location = new System.Drawing.Point(602, 141);
+            this.checkBoxAtivoCa.Name = "checkBoxAtivoCa";
+            this.checkBoxAtivoCa.Size = new System.Drawing.Size(59, 20);
+            this.checkBoxAtivoCa.TabIndex = 155;
+            this.checkBoxAtivoCa.Text = "Ativo";
+            this.checkBoxAtivoCa.UseVisualStyleBackColor = true;
+            this.checkBoxAtivoCa.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
             // 
-            // checkBox1
+            // checkBoxAtivoMe
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(602, 295);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(59, 20);
-            this.checkBox1.TabIndex = 154;
-            this.checkBox1.Text = "Ativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            this.checkBoxAtivoMe.AutoSize = true;
+            this.checkBoxAtivoMe.Location = new System.Drawing.Point(602, 285);
+            this.checkBoxAtivoMe.Name = "checkBoxAtivoMe";
+            this.checkBoxAtivoMe.Size = new System.Drawing.Size(59, 20);
+            this.checkBoxAtivoMe.TabIndex = 154;
+            this.checkBoxAtivoMe.Text = "Ativo";
+            this.checkBoxAtivoMe.UseVisualStyleBackColor = true;
+            this.checkBoxAtivoMe.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // label18
             // 
@@ -111,12 +111,12 @@
             this.label18.TabIndex = 153;
             this.label18.Text = "Posição";
             // 
-            // textBox8
+            // textBoxPosicao
             // 
-            this.textBox8.Location = new System.Drawing.Point(84, 379);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(121, 22);
-            this.textBox8.TabIndex = 152;
+            this.textBoxPosicao.Location = new System.Drawing.Point(84, 379);
+            this.textBoxPosicao.Name = "textBoxPosicao";
+            this.textBoxPosicao.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPosicao.TabIndex = 152;
             // 
             // label17
             // 
@@ -127,23 +127,23 @@
             this.label17.TabIndex = 151;
             this.label17.Text = "Salario";
             // 
-            // textBox7
+            // textBoxSalario
             // 
-            this.textBox7.Location = new System.Drawing.Point(250, 379);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 22);
-            this.textBox7.TabIndex = 150;
+            this.textBoxSalario.Location = new System.Drawing.Point(250, 379);
+            this.textBoxSalario.Name = "textBoxSalario";
+            this.textBoxSalario.Size = new System.Drawing.Size(121, 22);
+            this.textBoxSalario.TabIndex = 150;
             // 
-            // checkBox6
+            // checkBoxNAtivoPa
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(728, 461);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(88, 20);
-            this.checkBox6.TabIndex = 149;
-            this.checkBox6.Text = "Não Ativo";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            this.checkBoxNAtivoPa.AutoSize = true;
+            this.checkBoxNAtivoPa.Location = new System.Drawing.Point(728, 461);
+            this.checkBoxNAtivoPa.Name = "checkBoxNAtivoPa";
+            this.checkBoxNAtivoPa.Size = new System.Drawing.Size(88, 20);
+            this.checkBoxNAtivoPa.TabIndex = 149;
+            this.checkBoxNAtivoPa.Text = "Não Ativo";
+            this.checkBoxNAtivoPa.UseVisualStyleBackColor = true;
+            this.checkBoxNAtivoPa.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // label15
             // 
@@ -154,7 +154,7 @@
             this.label15.Size = new System.Drawing.Size(140, 29);
             this.label15.TabIndex = 148;
             this.label15.Text = "Categorias";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            
             // 
             // label16
             // 
@@ -165,25 +165,25 @@
             this.label16.TabIndex = 147;
             this.label16.Text = "Nome";
             // 
-            // listBox4
+            // listBoxPagamento
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(602, 396);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(226, 52);
-            this.listBox4.TabIndex = 146;
+            this.listBoxPagamento.FormattingEnabled = true;
+            this.listBoxPagamento.ItemHeight = 16;
+            this.listBoxPagamento.Location = new System.Drawing.Point(602, 396);
+            this.listBoxPagamento.Name = "listBoxPagamento";
+            this.listBoxPagamento.Size = new System.Drawing.Size(226, 52);
+            this.listBoxPagamento.TabIndex = 146;
             // 
-            // checkBox2
+            // checkBoxNAtivoMe
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(728, 285);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(88, 20);
-            this.checkBox2.TabIndex = 145;
-            this.checkBox2.Text = "Não Ativo";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBoxNAtivoMe.AutoSize = true;
+            this.checkBoxNAtivoMe.Location = new System.Drawing.Point(728, 285);
+            this.checkBoxNAtivoMe.Name = "checkBoxNAtivoMe";
+            this.checkBoxNAtivoMe.Size = new System.Drawing.Size(88, 20);
+            this.checkBoxNAtivoMe.TabIndex = 145;
+            this.checkBoxNAtivoMe.Text = "Não Ativo";
+            this.checkBoxNAtivoMe.UseVisualStyleBackColor = true;
+            this.checkBoxNAtivoMe.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label13
             // 
@@ -203,28 +203,28 @@
             this.label14.Size = new System.Drawing.Size(44, 16);
             this.label14.TabIndex = 143;
             this.label14.Text = "Nome";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            
             // 
-            // listBox3
+            // listBoxCategorias
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(602, 73);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(226, 52);
-            this.listBox3.TabIndex = 142;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            this.listBoxCategorias.FormattingEnabled = true;
+            this.listBoxCategorias.ItemHeight = 16;
+            this.listBoxCategorias.Location = new System.Drawing.Point(602, 73);
+            this.listBoxCategorias.Name = "listBoxCategorias";
+            this.listBoxCategorias.Size = new System.Drawing.Size(226, 52);
+            this.listBoxCategorias.TabIndex = 142;
+            this.listBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
-            // checkBox4
+            // checkBoxNAtivoCa
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(728, 141);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(88, 20);
-            this.checkBox4.TabIndex = 141;
-            this.checkBox4.Text = "Não Ativo";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.checkBoxNAtivoCa.AutoSize = true;
+            this.checkBoxNAtivoCa.Location = new System.Drawing.Point(728, 141);
+            this.checkBoxNAtivoCa.Name = "checkBoxNAtivoCa";
+            this.checkBoxNAtivoCa.Size = new System.Drawing.Size(88, 20);
+            this.checkBoxNAtivoCa.TabIndex = 141;
+            this.checkBoxNAtivoCa.Text = "Não Ativo";
+            this.checkBoxNAtivoCa.UseVisualStyleBackColor = true;
+            this.checkBoxNAtivoCa.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // button3
             // 
@@ -266,23 +266,23 @@
             this.label11.TabIndex = 137;
             this.label11.Text = "Nome";
             // 
-            // listBox2
+            // listBoxMenu
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(602, 227);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(226, 52);
-            this.listBox2.TabIndex = 136;
+            this.listBoxMenu.FormattingEnabled = true;
+            this.listBoxMenu.ItemHeight = 16;
+            this.listBoxMenu.Location = new System.Drawing.Point(602, 227);
+            this.listBoxMenu.Name = "listBoxMenu";
+            this.listBoxMenu.Size = new System.Drawing.Size(226, 52);
+            this.listBoxMenu.TabIndex = 136;
             // 
-            // listBox1
+            // listBoxRestaurantes
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(72, 429);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(212, 52);
-            this.listBox1.TabIndex = 135;
+            this.listBoxRestaurantes.FormattingEnabled = true;
+            this.listBoxRestaurantes.ItemHeight = 16;
+            this.listBoxRestaurantes.Location = new System.Drawing.Point(72, 429);
+            this.listBoxRestaurantes.Name = "listBoxRestaurantes";
+            this.listBoxRestaurantes.Size = new System.Drawing.Size(212, 52);
+            this.listBoxRestaurantes.TabIndex = 135;
             // 
             // button1
             // 
@@ -312,12 +312,12 @@
             this.label10.TabIndex = 132;
             this.label10.Text = "Telemovel";
             // 
-            // textBox6
+            // textBoxTele
             // 
-            this.textBox6.Location = new System.Drawing.Point(84, 335);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(118, 22);
-            this.textBox6.TabIndex = 131;
+            this.textBoxTele.Location = new System.Drawing.Point(84, 335);
+            this.textBoxTele.Name = "textBoxTele";
+            this.textBoxTele.Size = new System.Drawing.Size(118, 22);
+            this.textBoxTele.TabIndex = 131;
             // 
             // label7
             // 
@@ -328,12 +328,12 @@
             this.label7.TabIndex = 130;
             this.label7.Text = "Pais";
             // 
-            // textBox5
+            // textBoxPais
             // 
-            this.textBox5.Location = new System.Drawing.Point(200, 273);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 22);
-            this.textBox5.TabIndex = 129;
+            this.textBoxPais.Location = new System.Drawing.Point(200, 273);
+            this.textBoxPais.Name = "textBoxPais";
+            this.textBoxPais.Size = new System.Drawing.Size(141, 22);
+            this.textBoxPais.TabIndex = 129;
             // 
             // label6
             // 
@@ -344,12 +344,12 @@
             this.label6.TabIndex = 128;
             this.label6.Text = "Codigo Postal";
             // 
-            // textBox4
+            // textBoxCodPost
             // 
-            this.textBox4.Location = new System.Drawing.Point(200, 248);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 22);
-            this.textBox4.TabIndex = 127;
+            this.textBoxCodPost.Location = new System.Drawing.Point(200, 248);
+            this.textBoxCodPost.Name = "textBoxCodPost";
+            this.textBoxCodPost.Size = new System.Drawing.Size(141, 22);
+            this.textBoxCodPost.TabIndex = 127;
             // 
             // label5
             // 
@@ -360,12 +360,12 @@
             this.label5.TabIndex = 126;
             this.label5.Text = "Cidade";
             // 
-            // textBox3
+            // textBoxCidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 220);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 22);
-            this.textBox3.TabIndex = 125;
+            this.textBoxCidad.Location = new System.Drawing.Point(200, 220);
+            this.textBoxCidad.Name = "textBoxCidad";
+            this.textBoxCidad.Size = new System.Drawing.Size(141, 22);
+            this.textBoxCidad.TabIndex = 125;
             // 
             // label4
             // 
@@ -376,12 +376,12 @@
             this.label4.TabIndex = 124;
             this.label4.Text = "Rua";
             // 
-            // textBox2
+            // textBoxRua
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 22);
-            this.textBox2.TabIndex = 123;
+            this.textBoxRua.Location = new System.Drawing.Point(200, 192);
+            this.textBoxRua.Name = "textBoxRua";
+            this.textBoxRua.Size = new System.Drawing.Size(141, 22);
+            this.textBoxRua.TabIndex = 123;
             // 
             // label8
             // 
@@ -421,57 +421,57 @@
             this.label2.TabIndex = 119;
             this.label2.Text = "Nome do Funcionario";
             // 
-            // textBox1
+            // NomeFunc
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 118;
+            this.NomeFunc.Location = new System.Drawing.Point(84, 120);
+            this.NomeFunc.Name = "NomeFunc";
+            this.NomeFunc.Size = new System.Drawing.Size(200, 22);
+            this.NomeFunc.TabIndex = 118;
             // 
             // FormRestauranteInd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 567);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxAtivoPa);
+            this.Controls.Add(this.checkBoxAtivoCa);
+            this.Controls.Add(this.checkBoxAtivoMe);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxPosicao);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.textBoxSalario);
+            this.Controls.Add(this.checkBoxNAtivoPa);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.listBoxPagamento);
+            this.Controls.Add(this.checkBoxNAtivoMe);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.listBoxCategorias);
+            this.Controls.Add(this.checkBoxNAtivoCa);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxMenu);
+            this.Controls.Add(this.listBoxRestaurantes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxTele);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxPais);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxCodPost);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxCidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxRua);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NomeFunc);
             this.Name = "FormRestauranteInd";
             this.Text = "FormRestauranteInd";
             this.Load += new System.EventHandler(this.FormRestauranteInd_Load);
@@ -482,44 +482,44 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxAtivoPa;
+        private System.Windows.Forms.CheckBox checkBoxAtivoCa;
+        private System.Windows.Forms.CheckBox checkBoxAtivoMe;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxPosicao;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.TextBox textBoxSalario;
+        private System.Windows.Forms.CheckBox checkBoxNAtivoPa;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.ListBox listBoxPagamento;
+        private System.Windows.Forms.CheckBox checkBoxNAtivoMe;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.ListBox listBoxCategorias;
+        private System.Windows.Forms.CheckBox checkBoxNAtivoCa;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxMenu;
+        private System.Windows.Forms.ListBox listBoxRestaurantes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxTele;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxPais;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxCodPost;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxRua;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NomeFunc;
     }
 }

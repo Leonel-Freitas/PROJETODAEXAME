@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonVoltar = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxIngred = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxFotografia = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBoxCategorias = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBoxNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxPreco = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button3
+            // buttonVoltar
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(694, 431);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 35);
-            this.button3.TabIndex = 129;
-            this.button3.Text = "->";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.buttonVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVoltar.Location = new System.Drawing.Point(694, 431);
+            this.buttonVoltar.Name = "buttonVoltar";
+            this.buttonVoltar.Size = new System.Drawing.Size(104, 35);
+            this.buttonVoltar.TabIndex = 129;
+            this.buttonVoltar.Text = "->";
+            this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // button1
+            // buttonAdicionar
             // 
-            this.button1.Location = new System.Drawing.Point(613, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 35);
-            this.button1.TabIndex = 128;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAdicionar.Location = new System.Drawing.Point(613, 288);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(104, 35);
+            this.buttonAdicionar.TabIndex = 128;
+            this.buttonAdicionar.Text = "Add";
+            this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -73,13 +73,13 @@
             this.label4.TabIndex = 127;
             this.label4.Text = "Ingredientes";
             // 
-            // textBox3
+            // textBoxIngred
             // 
-            this.textBox3.Location = new System.Drawing.Point(480, 193);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 68);
-            this.textBox3.TabIndex = 126;
+            this.textBoxIngred.Location = new System.Drawing.Point(480, 193);
+            this.textBoxIngred.Multiline = true;
+            this.textBoxIngred.Name = "textBoxIngred";
+            this.textBoxIngred.Size = new System.Drawing.Size(200, 68);
+            this.textBoxIngred.TabIndex = 126;
             // 
             // label1
             // 
@@ -90,12 +90,12 @@
             this.label1.TabIndex = 125;
             this.label1.Text = "Fotografia";
             // 
-            // textBox2
+            // textBoxFotografia
             // 
-            this.textBox2.Location = new System.Drawing.Point(480, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 22);
-            this.textBox2.TabIndex = 124;
+            this.textBoxFotografia.Location = new System.Drawing.Point(480, 118);
+            this.textBoxFotografia.Name = "textBoxFotografia";
+            this.textBoxFotografia.Size = new System.Drawing.Size(200, 22);
+            this.textBoxFotografia.TabIndex = 124;
             // 
             // label15
             // 
@@ -107,14 +107,14 @@
             this.label15.TabIndex = 123;
             this.label15.Text = "Categorias";
             // 
-            // listBox3
+            // listBoxCategorias
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(66, 193);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(222, 68);
-            this.listBox3.TabIndex = 122;
+            this.listBoxCategorias.FormattingEnabled = true;
+            this.listBoxCategorias.ItemHeight = 16;
+            this.listBoxCategorias.Location = new System.Drawing.Point(66, 193);
+            this.listBoxCategorias.Name = "listBoxCategorias";
+            this.listBoxCategorias.Size = new System.Drawing.Size(222, 68);
+            this.listBoxCategorias.TabIndex = 122;
             // 
             // label3
             // 
@@ -135,12 +135,12 @@
             this.label2.TabIndex = 120;
             this.label2.Text = "Nome do Menu";
             // 
-            // textBox1
+            // TextBoxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 119;
+            this.TextBoxNome.Location = new System.Drawing.Point(78, 118);
+            this.TextBoxNome.Name = "TextBoxNome";
+            this.TextBoxNome.Size = new System.Drawing.Size(200, 22);
+            this.TextBoxNome.TabIndex = 119;
             // 
             // label5
             // 
@@ -151,12 +151,12 @@
             this.label5.TabIndex = 131;
             this.label5.Text = "Preço";
             // 
-            // textBox4
+            // textBoxPreco
             // 
-            this.textBox4.Location = new System.Drawing.Point(78, 310);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 22);
-            this.textBox4.TabIndex = 130;
+            this.textBoxPreco.Location = new System.Drawing.Point(78, 310);
+            this.textBoxPreco.Name = "textBoxPreco";
+            this.textBoxPreco.Size = new System.Drawing.Size(200, 22);
+            this.textBoxPreco.TabIndex = 130;
             // 
             // FormMenu
             // 
@@ -164,18 +164,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 508);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxPreco);
+            this.Controls.Add(this.buttonVoltar);
+            this.Controls.Add(this.buttonAdicionar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxIngred);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxFotografia);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBoxCategorias);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextBoxNome);
             this.Name = "FormMenu";
             this.Text = "FormMenu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
@@ -186,18 +186,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonVoltar;
+        private System.Windows.Forms.Button buttonAdicionar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxIngred;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxFotografia;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBoxCategorias;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBoxNome;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxPreco;
     }
 }
