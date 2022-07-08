@@ -31,10 +31,5 @@ namespace PROJETODAEXAME
         public virtual Estado Estado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagamento> Pagamento { get; set; }
-
-        public override string ToString()
-        {
-            return  this.Id + " " + Estado.ToString() + " " + this.ValorTotal;
-        }
     }
 }

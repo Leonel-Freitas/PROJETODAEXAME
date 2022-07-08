@@ -322,7 +322,7 @@ namespace PROJETODAEXAME
 
             IEnumerable<ItemMenu> MenuAndando = from itemmenu in listamenu
                                                 where itemmenu.Categoria == categoria
-                                                where itemmenu.Ativo == true
+                                                
                                                 select itemmenu;
 
             foreach (ItemMenu itemmenu in MenuAndando)

@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="Model1.Pagamento" Width="1.5" PointX="0.75" PointY="8.375" />
         <EntityTypeShape EntityType="Model1.Morada" Width="1.5" PointX="9.75" PointY="9.375" />
         <EntityTypeShape EntityType="Model1.Pessoa" Width="1.5" PointX="10.125" PointY="0.75" />
-        <EntityTypeShape EntityType="Model1.MetodoPagamento" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="Model1.MetodoPagamento" Width="1.5" PointX="0.625" PointY="11.375" />
         <AssociationConnector Association="Model1.PedidoCliente" />
         <AssociationConnector Association="Model1.TrabalhadorRestaurante" />
         <AssociationConnector Association="Model1.PedidoTrabalhador" />
@@ -28,6 +28,8 @@
         <AssociationConnector Association="Model1.RestauranteMorada" />
         <AssociationConnector Association="Model1.PessoaMorada" />
         <InheritanceConnector EntityType="Model1.Cliente" />
+        <EntityTypeShape EntityType="Model1.Codigo" Width="1.5" PointX="2.625" PointY="10.25" />
+        <AssociationConnector Association="Model1.CodigoPagamento" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

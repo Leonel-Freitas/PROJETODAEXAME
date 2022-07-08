@@ -98,5 +98,17 @@ namespace PROJETODAEXAME
             listBox1.ClearSelected();
             comboBox2.ResetText();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var myForm = new FormCodigo();
+            myForm.Show();
+            this.Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

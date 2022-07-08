@@ -205,9 +205,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(452, 262);
+            this.button3.Location = new System.Drawing.Point(463, 266);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 35);
+            this.button3.Size = new System.Drawing.Size(93, 31);
             this.button3.TabIndex = 86;
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;

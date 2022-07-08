@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/07/2022 23:49:30
+-- Date Created: 07/08/2022 08:03:39
 -- Generated from EDMX file: C:\Users\leomi\OneDrive\Ambiente de Trabalho\PROJETODAEXAME\PROJETODAEXAME\Model1.edmx
 -- --------------------------------------------------
 
@@ -56,6 +56,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_PessoaMorada]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PessoaSet] DROP CONSTRAINT [FK_PessoaMorada];
 GO
+IF OBJECT_ID(N'[dbo].[FK_CodigoPagamento]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PagamentoSet] DROP CONSTRAINT [FK_CodigoPagamento];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Cliente_inherits_Pessoa]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PessoaSet_Cliente] DROP CONSTRAINT [FK_Cliente_inherits_Pessoa];
 GO
@@ -93,6 +96,9 @@ IF OBJECT_ID(N'[dbo].[PessoaSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[MetodoPagamentoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[MetodoPagamentoSet];
+GO
+IF OBJECT_ID(N'[dbo].[CodigoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CodigoSet];
 GO
 IF OBJECT_ID(N'[dbo].[PessoaSet_Cliente]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PessoaSet_Cliente];
@@ -160,6 +166,7 @@ GO
 CREATE TABLE [dbo].[PagamentoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Valor] decimal(18,0)  NOT NULL,
+    [CodigoId] int  NULL,
     [Pedido_Id] int  NOT NULL,
     [MetodoPagamento_Id] int  NOT NULL
 );
@@ -189,6 +196,14 @@ CREATE TABLE [dbo].[MetodoPagamentoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [TipoPagamento] nvarchar(max)  NOT NULL,
     [Ativo] bit  NOT NULL
+);
+GO
+
+-- Creating table 'CodigoSet'
+CREATE TABLE [dbo].[CodigoSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Code] nvarchar(max)  NOT NULL,
+    [Descrição] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -278,6 +293,12 @@ GO
 -- Creating primary key on [Id] in table 'MetodoPagamentoSet'
 ALTER TABLE [dbo].[MetodoPagamentoSet]
 ADD CONSTRAINT [PK_MetodoPagamentoSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CodigoSet'
+ALTER TABLE [dbo].[CodigoSet]
+ADD CONSTRAINT [PK_CodigoSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -490,6 +511,21 @@ GO
 CREATE INDEX [IX_FK_PessoaMorada]
 ON [dbo].[PessoaSet]
     ([Morada_Id]);
+GO
+
+-- Creating foreign key on [CodigoId] in table 'PagamentoSet'
+ALTER TABLE [dbo].[PagamentoSet]
+ADD CONSTRAINT [FK_CodigoPagamento]
+    FOREIGN KEY ([CodigoId])
+    REFERENCES [dbo].[CodigoSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CodigoPagamento'
+CREATE INDEX [IX_FK_CodigoPagamento]
+ON [dbo].[PagamentoSet]
+    ([CodigoId]);
 GO
 
 -- Creating foreign key on [Id] in table 'PessoaSet_Cliente'

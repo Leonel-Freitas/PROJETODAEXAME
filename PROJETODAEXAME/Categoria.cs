@@ -29,7 +29,7 @@ namespace PROJETODAEXAME
 
         public override string ToString()
         {
-            return this.Nome + " " + this.Ativo;
+            return this.Nome;
         }
     }
 }

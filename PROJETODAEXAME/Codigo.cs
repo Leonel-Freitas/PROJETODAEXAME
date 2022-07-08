@@ -12,30 +12,19 @@ namespace PROJETODAEXAME
     using System;
     using System.Collections.Generic;
     
-    public partial class ItemMenu
+    public partial class Codigo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ItemMenu()
+        public Codigo()
         {
-            this.Restaurante = new HashSet<Restaurante>();
-            this.Pedido = new HashSet<Pedido>();
+            this.Pagamento = new HashSet<Pagamento>();
         }
     
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public short Fotografia { get; set; }
-        public string Ingredientes { get; set; }
-        public bool Ativo { get; set; }
-        public double Preço { get; set; }
+        public string Code { get; set; }
+        public string Descrição { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Restaurante> Restaurante { get; set; }
-        public virtual Categoria Categoria { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pedido> Pedido { get; set; }
-        public override string ToString()
-        {
-            return this.Nome;
-        }
+        public virtual ICollection<Pagamento> Pagamento { get; set; }
     }
 }

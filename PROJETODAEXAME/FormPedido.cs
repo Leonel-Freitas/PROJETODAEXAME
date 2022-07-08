@@ -106,6 +106,7 @@ namespace PROJETODAEXAME
             listBox2.Items.Clear();
             Categoria categoria = (Categoria)listBox1.SelectedItem;
             ItemMenu menu = new ItemMenu();
+            
             if (listBox1.SelectedItem == null)
             {
                 return;
@@ -114,7 +115,7 @@ namespace PROJETODAEXAME
 
             List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
 
-
+            
             IEnumerable<ItemMenu> MenuAndando = from itemmenu in listamenu
                                                 where itemmenu.Categoria == categoria
                                                 where itemmenu.Ativo == true
@@ -128,6 +129,7 @@ namespace PROJETODAEXAME
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            
             var myForm = new FormPrincipal();
             myForm.Show();
             this.Close();

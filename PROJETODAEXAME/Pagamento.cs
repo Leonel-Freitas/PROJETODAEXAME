@@ -16,8 +16,10 @@ namespace PROJETODAEXAME
     {
         public int Id { get; set; }
         public decimal Valor { get; set; }
+        public Nullable<int> CodigoId { get; set; }
     
         public virtual Pedido Pedido { get; set; }
         public virtual MetodoPagamento MetodoPagamento { get; set; }
+        public virtual Codigo Codigo { get; set; }
     }
 }

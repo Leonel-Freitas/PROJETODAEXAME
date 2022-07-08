@@ -114,20 +114,19 @@ namespace PROJETODAEXAME
             {
                 return;
             }
-            
-
-            List<Pedido> listapedido = model1Container.PedidoSet.ToList<Pedido>();
 
 
-            IEnumerable<Pedido> MenuAndando = from pedidomenu in listapedido
-                                             
-                                              where pedidomenu.ItemMenu.Count == 2
-                                              
-                                              select pedidomenu;
+            List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
 
-            foreach (Pedido pedidomenu in MenuAndando)
+
+            IEnumerable<ItemMenu> MenuAndando = from itemmenu in listamenu
+                                                
+                                                where itemmenu.Ativo == true
+                                                select itemmenu;
+
+            foreach (ItemMenu itemmenu in MenuAndando)
             {
-                listBox2.Items.Add(pedidomenu);
+                listBox2.Items.Add(itemmenu);
             }
         }
 
