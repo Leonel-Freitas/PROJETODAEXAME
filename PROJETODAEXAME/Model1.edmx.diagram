@@ -30,6 +30,7 @@
         <InheritanceConnector EntityType="Model1.Cliente" />
         <EntityTypeShape EntityType="Model1.Codigo" Width="1.5" PointX="2.625" PointY="10.25" />
         <AssociationConnector Association="Model1.CodigoPagamento" />
+        <EntityTypeShape EntityType="Model1.Defesas" Width="1.5" PointX="9.5" PointY="13.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

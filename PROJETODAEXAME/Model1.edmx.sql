@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/08/2022 08:03:39
+-- Date Created: 07/21/2022 18:42:13
 -- Generated from EDMX file: C:\Users\leomi\OneDrive\Ambiente de Trabalho\PROJETODAEXAME\PROJETODAEXAME\Model1.edmx
 -- --------------------------------------------------
 
@@ -100,6 +100,9 @@ GO
 IF OBJECT_ID(N'[dbo].[CodigoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CodigoSet];
 GO
+IF OBJECT_ID(N'[dbo].[DefesasSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DefesasSet];
+GO
 IF OBJECT_ID(N'[dbo].[PessoaSet_Cliente]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PessoaSet_Cliente];
 GO
@@ -139,7 +142,7 @@ GO
 CREATE TABLE [dbo].[ItemMenuSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
-    [Fotografia] smallint  NOT NULL,
+    [Fotografia] varbinary(max)  NOT NULL,
     [Ingredientes] nvarchar(max)  NOT NULL,
     [Ativo] bit  NOT NULL,
     [Preço] float  NOT NULL,
@@ -204,6 +207,15 @@ CREATE TABLE [dbo].[CodigoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Code] nvarchar(max)  NOT NULL,
     [Descrição] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'DefesasSet'
+CREATE TABLE [dbo].[DefesasSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [NomeAluno] nvarchar(max)  NOT NULL,
+    [Numero] int  NOT NULL,
+    [NotaEsperada] decimal(18,0)  NOT NULL
 );
 GO
 
@@ -299,6 +311,12 @@ GO
 -- Creating primary key on [Id] in table 'CodigoSet'
 ALTER TABLE [dbo].[CodigoSet]
 ADD CONSTRAINT [PK_CodigoSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'DefesasSet'
+ALTER TABLE [dbo].[DefesasSet]
+ADD CONSTRAINT [PK_DefesasSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 

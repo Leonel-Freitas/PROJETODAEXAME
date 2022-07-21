@@ -12,18 +12,11 @@ namespace PROJETODAEXAME
     using System;
     using System.Collections.Generic;
     
-    public partial class Estado
+    public partial class Defesas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Estado()
-        {
-            this.Pedido = new HashSet<Pedido>();
-        }
-    
         public int Id { get; set; }
-        public string TipoEstado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pedido> Pedido { get; set; }
+        public string NomeAluno { get; set; }
+        public int Numero { get; set; }
+        public decimal NotaEsperada { get; set; }
     }
 }

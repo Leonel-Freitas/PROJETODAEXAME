@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCliente));
             this.Voltar = new System.Windows.Forms.Button();
             this.Adiciona = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,8 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.Editar = new System.Windows.Forms.Button();
-            this.Cliente = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.ListboxCliente = new System.Windows.Forms.ListBox();
+            this.btnRegistarCliente = new System.Windows.Forms.Button();
+            this.btnApagarCliente1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Voltar
@@ -64,11 +66,11 @@
             // 
             // Adiciona
             // 
-            this.Adiciona.Location = new System.Drawing.Point(279, 437);
+            this.Adiciona.Location = new System.Drawing.Point(514, 318);
             this.Adiciona.Name = "Adiciona";
-            this.Adiciona.Size = new System.Drawing.Size(104, 35);
+            this.Adiciona.Size = new System.Drawing.Size(314, 35);
             this.Adiciona.TabIndex = 83;
-            this.Adiciona.Text = "Add";
+            this.Adiciona.Text = "Add Cliente";
             this.Adiciona.UseVisualStyleBackColor = true;
             this.Adiciona.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -205,40 +207,52 @@
             // 
             // Editar
             // 
-            this.Editar.Location = new System.Drawing.Point(463, 266);
+            this.Editar.Location = new System.Drawing.Point(683, 364);
             this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(93, 31);
+            this.Editar.Size = new System.Drawing.Size(145, 58);
             this.Editar.TabIndex = 86;
             this.Editar.Text = "Edit";
             this.Editar.UseVisualStyleBackColor = true;
             this.Editar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Cliente
+            // ListboxCliente
             // 
-            this.Cliente.FormattingEnabled = true;
-            this.Cliente.ItemHeight = 16;
-            this.Cliente.Location = new System.Drawing.Point(452, 61);
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Size = new System.Drawing.Size(118, 180);
-            this.Cliente.TabIndex = 87;
-            this.Cliente.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.ListboxCliente.FormattingEnabled = true;
+            this.ListboxCliente.ItemHeight = 16;
+            this.ListboxCliente.Location = new System.Drawing.Point(514, 61);
+            this.ListboxCliente.Name = "ListboxCliente";
+            this.ListboxCliente.Size = new System.Drawing.Size(314, 244);
+            this.ListboxCliente.TabIndex = 87;
+            this.ListboxCliente.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // listBox2
+            // btnRegistarCliente
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(675, 61);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(155, 180);
-            this.listBox2.TabIndex = 88;
+            this.btnRegistarCliente.Location = new System.Drawing.Point(514, 437);
+            this.btnRegistarCliente.Name = "btnRegistarCliente";
+            this.btnRegistarCliente.Size = new System.Drawing.Size(145, 58);
+            this.btnRegistarCliente.TabIndex = 90;
+            this.btnRegistarCliente.Text = "Adicionar Dados";
+            this.btnRegistarCliente.UseVisualStyleBackColor = true;
+            this.btnRegistarCliente.Click += new System.EventHandler(this.btnRegistarCliente_Click);
+            // 
+            // btnApagarCliente1
+            // 
+            this.btnApagarCliente1.Location = new System.Drawing.Point(514, 364);
+            this.btnApagarCliente1.Name = "btnApagarCliente1";
+            this.btnApagarCliente1.Size = new System.Drawing.Size(145, 58);
+            this.btnApagarCliente1.TabIndex = 91;
+            this.btnApagarCliente1.Text = "Apagar";
+            this.btnApagarCliente1.UseVisualStyleBackColor = true;
+            this.btnApagarCliente1.Click += new System.EventHandler(this.btnApagarCliente1_Click);
             // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 513);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.Cliente);
+            this.Controls.Add(this.btnApagarCliente1);
+            this.Controls.Add(this.btnRegistarCliente);
+            this.Controls.Add(this.ListboxCliente);
             this.Controls.Add(this.Editar);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Adiciona);
@@ -259,7 +273,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNome);
             this.Name = "FormCliente";
-            this.Text = "FormClientes";
+            this.Text = resources.GetString("$this.Text");
             this.Load += new System.EventHandler(this.FormCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,7 +301,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button Editar;
-        private System.Windows.Forms.ListBox Cliente;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox ListboxCliente;
+        private System.Windows.Forms.Button btnRegistarCliente;
+        private System.Windows.Forms.Button btnApagarCliente1;
     }
 }

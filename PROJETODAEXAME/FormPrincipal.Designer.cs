@@ -32,6 +32,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBoxRestaurantes = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button4
@@ -74,16 +75,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // listBoxRestaurantes
+            // 
+            this.listBoxRestaurantes.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRestaurantes.FormattingEnabled = true;
+            this.listBoxRestaurantes.ItemHeight = 24;
+            this.listBoxRestaurantes.Location = new System.Drawing.Point(12, 71);
+            this.listBoxRestaurantes.Name = "listBoxRestaurantes";
+            this.listBoxRestaurantes.Size = new System.Drawing.Size(239, 292);
+            this.listBoxRestaurantes.TabIndex = 16;
+            // 
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 472);
+            this.Controls.Add(this.listBoxRestaurantes);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBoxRestaurantes;
     }
 }
 

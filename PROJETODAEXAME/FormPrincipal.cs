@@ -12,9 +12,12 @@ namespace PROJETODAEXAME
 {
     public partial class FormPrincipal : Form
     {
+        public static Model1Container model1Container;
         public FormPrincipal()
         {
+            model1Container = new Model1Container();
             InitializeComponent();
+            lerDadosRestaurante();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,9 +43,26 @@ namespace PROJETODAEXAME
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var myForm = new FormMenu();
-            myForm.Show();
-            this.Hide();
+            if (listBoxRestaurantes.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nenhum restaurante selecionado", "Erro");
+                return;
+            }
+            else
+            {
+                Restaurante restauranteSelecionado = (Restaurante)listBoxRestaurantes.SelectedItem;
+                FormMenu form = new FormMenu(restauranteSelecionado);
+                form.Show();
+                this.Hide();
+            }
+            
         }
+        private void lerDadosRestaurante()
+        {
+            listBoxRestaurantes.DataSource = model1Container.RestauranteSet.ToList<Restaurante>();
+            listBoxRestaurantes.SelectedIndex = -1;
+        }
+
+
     }
 }

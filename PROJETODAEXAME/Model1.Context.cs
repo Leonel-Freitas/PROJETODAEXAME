@@ -35,5 +35,6 @@ namespace PROJETODAEXAME
         public virtual DbSet<Pessoa> PessoaSet { get; set; }
         public virtual DbSet<MetodoPagamento> MetodoPagamentoSet { get; set; }
         public virtual DbSet<Codigo> CodigoSet { get; set; }
+        public virtual DbSet<Defesas> DefesasSet { get; set; }
     }
 }

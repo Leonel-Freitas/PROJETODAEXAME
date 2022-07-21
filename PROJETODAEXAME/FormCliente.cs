@@ -15,43 +15,19 @@ namespace PROJETODAEXAME
         Model1Container model1Container;
         public FormCliente()
         {
+            model1Container = new Model1Container();
             InitializeComponent();
+            lerDadosCliente();
         }
-         
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxNome.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCidade.Text) || string.IsNullOrEmpty(textBoxCodPost.Text) || string.IsNullOrEmpty(textBoxPais.Text) || string.IsNullOrEmpty(textBoxTele.Text) || string.IsNullOrEmpty(textBoxNumCont.Text))
-            {
-                return;
-            }
-            
-            Cliente cliente = new Cliente();
-            Morada morada = new Morada();
-
-            Int32.TryParse(textBoxTele.Text, out int resultado);
-            Int32.TryParse(textBoxNumCont.Text, out int resultado2);
-            cliente.Nome = textBoxNome.Text;
-            morada.Rua = textBoxRua.Text;
-            morada.Cidade = textBoxCidade.Text;
-            morada.CodPostal = textBoxCodPost.Text;
-            morada.Pais = textBoxPais.Text;
-            cliente.Telemovel = resultado;
-            cliente.NumContribuinte = resultado2;
-            cliente.Morada = morada;
-            //adicionar os dados para a base de Dados
-            model1Container.MoradaSet.Add(morada);
-            model1Container.PessoaSet.Add(cliente);
-            model1Container.SaveChanges();
-
-            //Limpar as TextBoxes
-            textBoxNome.Clear();
-            textBoxRua.Clear();
-            textBoxCidade.Clear();
-            textBoxCodPost.Clear();
-            textBoxPais.Clear();
-            textBoxTele.Clear();
-            textBoxNumCont.Clear();
-
+            ClearAllText(this);
+            btnRegistarCliente.Enabled = true;
+            btnRegistarCliente.Visible = true;
+            Editar.Enabled = false;
+            Editar.Visible = false;
+            ListboxCliente.SelectedIndex = -1;
 
 
         }
@@ -65,75 +41,195 @@ namespace PROJETODAEXAME
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
-            model1Container = new Model1Container();
-            List<Pessoa> listapessoa1 = model1Container.PessoaSet.ToList<Pessoa>();
 
-            foreach (Pessoa pessoa1 in listapessoa1)
-            {
-                if (pessoa1 is Cliente)
-                {
-                    Cliente.Items.Add(pessoa1);
-                }
-            }
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cliente cliente = (Cliente)Cliente.SelectedItem;
+
             Morada morada = new Morada();
-            Int32.TryParse(textBoxTele.Text, out int resultado);
-            Int32.TryParse(textBoxNumCont.Text, out int resultado2);
-            cliente.Nome = textBoxNome.Text;
-            morada.Rua = textBoxRua.Text;
-            morada.Cidade = textBoxCidade.Text;
-            morada.CodPostal = textBoxCodPost.Text;
-            morada.Pais = textBoxPais.Text;
-            cliente.Telemovel = resultado;
-            cliente.NumContribuinte = resultado2;
-            cliente.Morada = morada;
 
-            //editar os dados para a base de Dados
-            model1Container.SaveChanges();
+            Cliente clienteSelecionado = (Cliente)ListboxCliente.SelectedItem;
+            if (clienteSelecionado == null)
+            {
+                MessageBox.Show("Selecione um cliente", "Erro");
+                return;
+            }
+            if (string.IsNullOrEmpty(textBoxNome.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCidade.Text) || string.IsNullOrEmpty(textBoxCodPost.Text) || string.IsNullOrEmpty(textBoxPais.Text) || string.IsNullOrEmpty(textBoxTele.Text) || string.IsNullOrEmpty(textBoxNumCont.Text))
+            {
+                MessageBox.Show("Introduza todos os campos no formulário.", "Erro");
+                return;
+            }
+            else
+            {
+                var cliente = model1Container.PessoaSet.Find(clienteSelecionado.Id);
 
-            //Limpar as TextBoxes
-            textBoxNome.Clear();
-            textBoxRua.Clear();
-            textBoxCidade.Clear();
-            textBoxCodPost.Clear();
-            textBoxPais.Clear();
-            textBoxTele.Clear();
-            textBoxNumCont.Clear();
+                cliente.Nome = textBoxNome.Text;
 
+                if (textBoxTele.TextLength < 9)
+                {
+                    MessageBox.Show("Telemovel Incorreto.", "Erro");
+                    return;
+                }
+                else
+                {
+                    Int32.TryParse(textBoxTele.Text, out int resultado);
+                    cliente.Telemovel = resultado;
+                }
+
+                // Introduzir dados da morada
+                cliente.Morada.Rua = textBoxRua.Text;
+                cliente.Morada.Cidade = textBoxCidade.Text;
+                if (textBoxCodPost.TextLength < 7)
+                {
+                    MessageBox.Show("Código Postal Incorreto", "Erro");
+                    return;
+                }
+                else
+                {
+                    cliente.Morada.CodPostal = textBoxCodPost.Text;
+                }
+                cliente.Morada.Pais = textBoxPais.Text;
+
+                model1Container.SaveChanges();
+                lerDadosCliente();
+                MessageBox.Show("Dados alterados com sucesso!", "Sucesso");
+
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //tentativa do produto mais consumido pelo cliente
-            listBox2.Items.Clear();
-            Cliente cliente = (Cliente)Cliente.SelectedItem;
-            Pedido pedido = new Pedido();
-            ItemMenu menu = new ItemMenu();
-            if (Cliente.SelectedItem == null)
+            Cliente clienteSelecionado = (Cliente)ListboxCliente.SelectedItem;
+            if (clienteSelecionado == null)
             {
                 return;
             }
+            string tele = Convert.ToString(clienteSelecionado.Telemovel);
+            string numCo = Convert.ToString(clienteSelecionado.NumContribuinte);
+            textBoxNome.Text = clienteSelecionado.Nome;
+            textBoxTele.Text = tele;
+
+            // Introduzir dados da morada
+            textBoxRua.Text = clienteSelecionado.Morada.Rua;
+            textBoxCidade.Text = clienteSelecionado.Morada.Cidade;
+            textBoxCodPost.Text = clienteSelecionado.Morada.CodPostal;
+            textBoxPais.Text = clienteSelecionado.Morada.Pais;
+            textBoxNumCont.Text = numCo;
 
 
-            List<ItemMenu> listamenu = model1Container.ItemMenuSet.ToList<ItemMenu>();
+        }
 
+        private void lerDadosCliente()
+        {
 
-            IEnumerable<ItemMenu> MenuAndando = from itemmenu in listamenu
-                                                
-                                                where itemmenu.Ativo == true
-                                                select itemmenu;
+            ListboxCliente.DataSource = model1Container.PessoaSet.OfType<Cliente>().ToList<Pessoa>();
+        }
 
-            foreach (ItemMenu itemmenu in MenuAndando)
+        private void btnApagarCliente_Click(object sender, EventArgs e)
+        {
+            try
             {
-                listBox2.Items.Add(itemmenu);
+                Cliente clienteSelecionado = (Cliente)ListboxCliente.SelectedItem;
+                if (clienteSelecionado == null)
+                {
+                    MessageBox.Show("Selecione um cliente");
+                    return;
+                }
+
+
+                model1Container.PessoaSet.Remove(clienteSelecionado);
+                model1Container.SaveChanges();
+                lerDadosCliente();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não pode apagar este cliente!", "Erro");
             }
         }
 
-       
+        void ClearAllText(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else
+                    ClearAllText(c);
+            }
+
+        }
+
+        private void btnRegistarCliente_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            Morada morada = new Morada();
+            if (string.IsNullOrEmpty(textBoxNome.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCidade.Text) || string.IsNullOrEmpty(textBoxCodPost.Text) || string.IsNullOrEmpty(textBoxPais.Text) || string.IsNullOrEmpty(textBoxTele.Text) || string.IsNullOrEmpty(textBoxNumCont.Text))
+            {
+                MessageBox.Show("Introduza todos os campos no formulário.");
+                return;
+            }
+            else
+            {
+                Int32.TryParse(textBoxTele.Text, out int resultado);
+                Int32.TryParse(textBoxNumCont.Text, out int resultado2);
+                // Introduzir dados do cliente
+                cliente.Nome = textBoxNome.Text;
+                cliente.TotalGasto = 0;
+                if (textBoxTele.TextLength < 9)
+                {
+                    MessageBox.Show("Telemovel Incorreto.");
+                    return;
+                }
+                else
+                {
+                    cliente.Telemovel = resultado;
+                }
+
+                // Introduzir dados da morada
+                morada.Rua = textBoxRua.Text;
+                morada.Cidade = textBoxCidade.Text;
+                if (textBoxCodPost.TextLength < 7)
+                {
+                    MessageBox.Show("Código Postal Incorreto");
+                    return;
+                }
+                else
+                {
+                   morada.CodPostal = textBoxCodPost.Text; ;
+                }
+                morada.Pais = textBoxPais.Text;
+                cliente.NumContribuinte = resultado2;
+
+                //adicionar os dados para a base de Dados
+                cliente.Morada = morada;
+                model1Container.PessoaSet.Add(cliente);
+                model1Container.SaveChanges();
+                lerDadosCliente();
+            }
+        }
+
+        private void btnApagarCliente1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente clienteSelecionado = (Cliente)ListboxCliente.SelectedItem;
+                if (clienteSelecionado == null)
+                {
+                    MessageBox.Show("Selecione um cliente");
+                    return;
+                }
+
+
+                model1Container.PessoaSet.Remove(clienteSelecionado);
+                model1Container.SaveChanges();
+                lerDadosCliente();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não pode apagar este cliente!", "Erro");
+            }
+        }
     }
 }
